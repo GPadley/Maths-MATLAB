@@ -1,10 +1,15 @@
-function [xout, yout] = RK4second (xin, yin, h, tin, func)
+function [xout, yout, tout] = RK4second (xin, yin, h, tin, func1, func2)
 
-	k1 = h*feval(func, xin ,yin, tin);
-	k2 = h*feval(func, xin+h/3, yin + k1/3, tin);
-	k3 = h*feval(func, xin+ 2*h/3, yin - k1/3 + k2, tin);
-	k4 = h*feval(func, xin +h, yin + k1 - k2 + k3, tin);
+	k1x = h*feval(func1, xin ,yin, tin); %approximating the first constants for the RK4th order 3/8 Method
+    k1y = h*feval(func2, xin ,yin, tin);
+	k2x = h*feval(func1, xin + k1x/3, yin + k1y/3, tin+h/3);
+	k2y = h*feval(func2, xin + k1x/3, yin + k1y/3, tin+h/3);
+	k3x = h*feval(func1, xin  - k1x/3 + k2x, yin - k1y/3 + k2y, tin+2*h/3);
+	k3y = h*feval(func2, xin  - k1x/3 + k2x, yin - k1y/3 + k2y, tin+2*h/3);
+	k4x = h*feval(func1, xin + k1x - k2x + k3x, yin + k1y - k2y + k3y, tin+h);
+    k4y = h*feval(func2, xin + k1x - k2x + k3x, yin + k1y - k2y + k3y, tin+h);
 
-	xout = xin + h;
-	yout = yin + (k1 + 3*k2 + 3*k3 + k4)/8;
+	xout = xin + (k1x + 3*k2x + 3*k3x + k4x)/8;
+	yout = yin + (k1y + 3*k2y + 3*k3y + k4y)/8;
+    tout = tin + h;
 end
