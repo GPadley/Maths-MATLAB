@@ -1,5 +1,6 @@
 clear;
 close all;
+
 R = 250; L = 650*10^-3; C = 3*10^-6; %Impedance values for the components
 w1 = 2*pi*500; %frequency for the 500 Hz sinusoid
 w2 = 2*pi*100; %frequency for the sinusoid
@@ -9,8 +10,10 @@ c1 = R/L; c2 = 1/(L*C); %ODE equation constants
 y0 = 0; x0 = 500*10^-9; t0 = 0; %Initial conditions y is current, x is charge and t is time
 h = 0.00001; %step size
 tf = 0.03; %final condition
+
 func1 = @(x, y, t) y; %y = q'
 func2 = @(x, y, t) 5/L - c1*y - c2*x; %thesecond coupled equation
+
 N = round((tf-t0)/h);
 
 ya = zeros(1,N); xa = zeros(1,N); ta = zeros(1,N); in = zeros(1,N);

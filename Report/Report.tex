@@ -1,30 +1,29 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage[top=0.4in, bottom=0.5in, includefoot]{geometry}
+\usepackage[top=0.4in, bottom=0.5in,margin=1in, includefoot]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \date{}
 \author{}
 \usepackage{amsmath}
+\usepackage{wrapfig}
 \usepackage{graphicx}
+\usepackage{lineno}
+
 
 \begin{document}
 \title{\textbf{EE2-08C Numerical Analysis} \\ Group 9\vspace{-17mm}}
 \maketitle
 
-\section*{Exercise 1}\vspace{-1mm}
-\subsection*{The Problem}
-
-\section*{Exercise 2}\vspace{-1mm}
-\subsection*{The Problem}
 
 \section*{Exercise 3}\vspace{-1mm}
-\subsection*{The Problem}
 
-\begin{figure}[h!]
-  \includegraphics[width=0.5\textwidth]{Ex3_Figs/RLC.png}
-  \caption{RLC Circuit}
-  \label{fig:boat1}
-\end{figure}
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\begin{center}	
+  		\includegraphics[width=0.48\textwidth]{Ex3_Figs/RLC.png}
+	\end{center}  	
+  	\caption{RLC Circuit}
+  	\label{fig:boat1}
+\end{wrapfigure}
 From Kirchoff's Voltage Law (KVL) the sum of all the voltages in a closed loop must sum to 0 V. Therefore from this we can derive the equation $V_{in}(t) = v_L(t)+v_R(t)+v_C(t)$. All of the voltages in the closed loop current which flows through them, all being equal to the inductor current. The voltage across a conductor is the inductance multiplied by the derivative of it's current, the voltage across the resistor is equal to it's resistance multiplied by the current travelling through it and the voltage across the capacitor is the charge held within the capacitor divided by the capacitance of the capacitor. Substituting these characteristics into the equation above gives us the equation:
 
 \[ L \frac{d}{dt}i_L(t) + R i_L(t) + \frac{1}{C}\int\limits_0^t i_L(t) \ dt = V_{in}(t)\] 
@@ -41,7 +40,7 @@ For our project we have values:
 
 \[R = 250 \Omega, C = 3 \mu F , L = 650 mH, i_L(0) = 0 \hspace{2mm} (y_0) \text{\hspace{2mm}and\hspace{2mm}} q_C(0) = 500nC \hspace{2mm} (x_0).\]
 
-Now that we have these two equations we are able to implement them into MATLAB by defining them as:
+Now that we have these two equations we are able to implement them into MATLAB scripf called 'RLC\_script.m` by defining them as:
 
 \begin{verbatim}
 R = 250; L = 650*10^-3; C = 3*10^-6; %Impedance values for the components
@@ -49,15 +48,25 @@ w1 = 2*pi*500; %frequency for the 500 Hz sinusoid
 w2 = 2*pi*100; %frequency for the sinusoid
 w3 = 2*pi*5; %frequency for the sinusoid
 tc = 3*10^-6; %tau for the exponential decay input
-c1 = R/L; c2 = 1/(L*C); %ODE equation constants
-y0 = 0; x0 = 500*10^-9; t0 = 0; %Initial conditions y is current, x is charge and t is time
+y0 = 0; x0 = 500*10^-9; t0 = 0; %Initial conditions y = iL, x =qC and t = time
 h = 0.00001; %step size
 tf = 0.03; %final condition
 func1 = @(x, y, t) y; %y = q'
-func2 = @(x, y, t) Vin - c1*y - c2*x; %thesecond coupled equation
+func2 = @(x, y, t) (Vin - R*y - x/C)/L; %the second coupled equation
 \end{verbatim}
 
+To now evaluate these coupled equations, we use the Runge Kutta 4th order 3/8 algorithm to use these two coupled equations to estimate the next point of the current $i_L$ and the charge $q_C$. The algorithm is:
 
+\[f_1(x,y,t) = y \hspace{3mm} f_2(x,y,z) = \frac{1}{L}[V_{in}(t) - Ry - \frac{x}{C}]\]
+\[k1_x = hf_1(x(i),y(i),t(i)) \hspace{3mm} k1_y = hf_2(x(i),y(i),t(i))\]
+\[k2_x = hf_1(x(i)+\frac{k1_x}{3},y(i)+\frac{k1_y}{3},t(i)+\frac{h}{3}) \] 
+\[k2_y = hf_2(x(i)+\frac{k1_x}{3},y(i)+\frac{k1_y}{3},t(i)+\frac{h}{3})\]
+\[k3_x = hf_1(x(i)-\frac{k1_x}{3}+k2_x,y(i)-\frac{k1_y}{3}+k2_y,t(i)+\frac{2h}{3}) \]
+\[k3_y = hf_2(x(i)-\frac{k1_x}{3}+k2_x,y(i)-\frac{k1_y}{3}+k2_y,t(i)+\frac{2h}{3})\]
+\[k4_x = hf_1(x(i)+k1_x-k2_x+k3_x,y(i)k1_y-k2_y+k3_y,t(i)+h) \]
+\[k4_y = hf_2(x(i)+k1_x-k2_x+k3_x,y(i)k1_y-k2_y+k3_y,t(i)+h)\]
+\[x(i+1) =x(i)+\frac{k1_x+3k2_x+3k3_x+k4_x}{8} \hspace{3mm} y(i+1) =y(i)+\frac{k1_y+3k2_y+3k3_y+k4_y}{8}\]
+\[t(i+1) = t(i) + h \hspace{3mm} \text{where h is time step}\]
 \section*{Exercise 4}\vspace{-1mm}
 \subsection*{The Problem}
 
