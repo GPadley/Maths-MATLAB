@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 \date{}
 \author{}
-
+\usepackage{amsmath}
 \usepackage{graphicx}
 
 \begin{document}
@@ -20,11 +20,42 @@
 \section*{Exercise 3}\vspace{-1mm}
 \subsection*{The Problem}
 
-\begin{figure}
+\begin{figure}[h!]
   \includegraphics[width=0.5\textwidth]{Ex3_Figs/RLC.png}
   \caption{RLC Circuit}
   \label{fig:boat1}
 \end{figure}
+From Kirchoff's Voltage Law (KVL) the sum of all the voltages in a closed loop must sum to 0 V. Therefore from this we can derive the equation $V_{in}(t) = v_L(t)+v_R(t)+v_C(t)$. All of the voltages in the closed loop current which flows through them, all being equal to the inductor current. The voltage across a conductor is the inductance multiplied by the derivative of it's current, the voltage across the resistor is equal to it's resistance multiplied by the current travelling through it and the voltage across the capacitor is the charge held within the capacitor divided by the capacitance of the capacitor. Substituting these characteristics into the equation above gives us the equation:
+
+\[ L \frac{d}{dt}i_L(t) + R i_L(t) + \frac{1}{C}\int\limits_0^t i_L(t) \ dt = V_{in}(t)\] 
+
+Substituting $i_L(t)$ for $\frac{d}{dt}q_C(t)$ you make the equation:
+
+\[ L \frac{d^2}{dt^2}q_C(t) + R\frac{d}{dt}q_C(t) + \frac{1}{C}q_C(t) = V_{in}(t)\]
+
+We were then able to turn this second order ODE into a set of 2 coupled first order ODEs through the use of equating $q_C'(t)$ = $y(t)$ and substituting $q_C(t)$ for $x(t)$ we have the coupled equations:
+
+\[y(t) = x'(t) \text{\hspace{5mm}and \hspace{5mm}}y'(t) = \frac{1}{L}[V_{in}(t)  - Ry(t) - \frac{1}{C}x(t)] \]
+
+For our project we have values:
+
+\[R = 250 \Omega, C = 3 \mu F , L = 650 mH, i_L(0) = 0 \hspace{2mm} (y_0) \text{\hspace{2mm}and\hspace{2mm}} q_C(0) = 500nC \hspace{2mm} (x_0).\]
+
+Now that we have these two equations we are able to implement them into MATLAB by defining them as:
+
+\begin{verbatim}
+R = 250; L = 650*10^-3; C = 3*10^-6; %Impedance values for the components
+w1 = 2*pi*500; %frequency for the 500 Hz sinusoid
+w2 = 2*pi*100; %frequency for the sinusoid
+w3 = 2*pi*5; %frequency for the sinusoid
+tc = 3*10^-6; %tau for the exponential decay input
+c1 = R/L; c2 = 1/(L*C); %ODE equation constants
+y0 = 0; x0 = 500*10^-9; t0 = 0; %Initial conditions y is current, x is charge and t is time
+h = 0.00001; %step size
+tf = 0.03; %final condition
+func1 = @(x, y, t) y; %y = q'
+func2 = @(x, y, t) Vin - c1*y - c2*x; %thesecond coupled equation
+\end{verbatim}
 
 
 \section*{Exercise 4}\vspace{-1mm}
