@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.22)  23 FEB 2017 10:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.22)  23 FEB 2017 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -482,6 +482,40 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframesep=\dimen128
 \bframebox=\box29
 LaTeX Info: Redefining \\ on input line 3056.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
+Package: layout 2014/10/28 v1.2c Show layout parameters
+\oneinch=\count111
+\cnt@paperwidth=\count112
+\cnt@paperheight=\count113
+\cnt@hoffset=\count114
+\cnt@voffset=\count115
+\cnt@textheight=\count116
+\cnt@textwidth=\count117
+\cnt@topmargin=\count118
+\cnt@oddsidemargin=\count119
+\cnt@evensidemargin=\count120
+\cnt@headheight=\count121
+\cnt@headsep=\count122
+\cnt@marginparsep=\count123
+\cnt@marginparwidth=\count124
+\cnt@marginparpush=\count125
+\cnt@footskip=\count126
+\fheight=\count127
+\ref@top=\count128
+\ref@hoffset=\count129
+\ref@voffset=\count130
+\ref@head=\count131
+\ref@body=\count132
+\ref@foot=\count133
+\ref@margin=\count134
+\ref@marginwidth=\count135
+\ref@marginpar=\count136
+\Interval=\count137
+\ExtraYPos=\count138
+\PositionX=\count139
+\PositionY=\count140
+\ArrowLength=\count141
 ) (./Report.aux
 
 LaTeX Warning: Label `fig:ex3g7' multiply defined.
@@ -489,18 +523,18 @@ LaTeX Warning: Label `fig:ex3g7' multiply defined.
 )
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -515,7 +549,7 @@ LaTeX Font Info:    ... okay on input line 13.
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=452.9679pt
-* \textheight=670.50687pt
+* \textheight=735.0pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-37.0pt
@@ -528,7 +562,7 @@ LaTeX Font Info:    ... okay on input line 13.
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
-* \voffset=0.0pt
+* \voffset=-43.36243pt
 * \mag=1000
 * \@twocolumnfalse
 * \@twosidefalse
@@ -538,16 +572,16 @@ LaTeX Font Info:    ... okay on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
+\scratchcounter=\count142
 \scratchdimen=\dimen129
 \scratchbox=\box30
-\nofMPsegments=\count112
-\nofMParguments=\count113
+\nofMPsegments=\count143
+\nofMParguments=\count144
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count114
+\MPscratchCnt=\count145
 \MPscratchDim=\dimen130
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
+\MPnumerator=\count146
+\makeMPintoPDFobject=\count147
 \everyMPtoPDFconversion=\toks26
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -596,9 +630,9 @@ e
 <Ex3_Figs/RLC.png, id=1, 628.3475pt x 490.83376pt>
 File: Ex3_Figs/RLC.png Graphic file (type png)
  <use Ex3_Figs/RLC.png>
-Package pdftex.def Info: Ex3_Figs/RLC.png used on input line 22.
+Package pdftex.def Info: Ex3_Figs/RLC.png used on input line 24.
 (pdftex.def)             Requested size: 217.42265pt x 169.83961pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 47.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 49.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -608,94 +642,96 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 <Ex3_Figs/Step.png, id=19, 421.575pt x 316.18124pt>
 File: Ex3_Figs/Step.png Graphic file (type png)
  <use Ex3_Figs/Step.png>
-Package pdftex.def Info: Ex3_Figs/Step.png used on input line 96.
+Package pdftex.def Info: Ex3_Figs/Step.png used on input line 98.
 (pdftex.def)             Requested size: 221.95676pt x 166.47043pt.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-105.
+107.
 
 <Ex3_Figs/5Sine2.png, id=20, 421.575pt x 316.18124pt>
 File: Ex3_Figs/5Sine2.png Graphic file (type png)
 
 <use Ex3_Figs/5Sine2.png>
-Package pdftex.def Info: Ex3_Figs/5Sine2.png used on input line 107.
+Package pdftex.def Info: Ex3_Figs/5Sine2.png used on input line 109.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-114.
+116.
 
 <Ex3_Figs/100Sine.png, id=21, 421.575pt x 316.18124pt>
 File: Ex3_Figs/100Sine.png Graphic file (type png)
 
 <use Ex3_Figs/100Sine.png>
-Package pdftex.def Info: Ex3_Figs/100Sine.png used on input line 116.
+Package pdftex.def Info: Ex3_Figs/100Sine.png used on input line 118.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
- [2 <./Ex3_Figs/Step.png (PNG copy)>]
+
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-124.
+125.
 
-<Ex3_Figs/500Sine.png, id=25, 421.575pt x 316.18124pt>
+<Ex3_Figs/500Sine.png, id=22, 421.575pt x 316.18124pt>
 File: Ex3_Figs/500Sine.png Graphic file (type png)
 
 <use Ex3_Figs/500Sine.png>
-Package pdftex.def Info: Ex3_Figs/500Sine.png used on input line 126.
+Package pdftex.def Info: Ex3_Figs/500Sine.png used on input line 127.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
-
+ [2 <./Ex3_Figs/Step.png (PNG copy)> <./Ex3_Figs/5Sine2.png (PNG copy)>]
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-133.
+134.
 
 <Ex3_Figs/5Squ1.png, id=26, 421.575pt x 316.18124pt>
 File: Ex3_Figs/5Squ1.png Graphic file (type png)
  <use Ex3_Figs/5Squ1.png>
-Package pdftex.def Info: Ex3_Figs/5Squ1.png used on input line 135.
+Package pdftex.def Info: Ex3_Figs/5Squ1.png used on input line 136.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-142.
+143.
 
 <Ex3_Figs/100Squ1.png, id=27, 421.575pt x 316.18124pt>
 File: Ex3_Figs/100Squ1.png Graphic file (type png)
 
 <use Ex3_Figs/100Squ1.png>
-Package pdftex.def Info: Ex3_Figs/100Squ1.png used on input line 144.
-(pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
- [3 <./Ex3_Figs/5Sine2.png (PNG copy)> <./Ex3_Figs/100Sine.png (PNG copy)> <./E
-x3_Figs/500Sine.png (PNG copy)>]
-
-Package wrapfig Warning: Collision between wrapping environments on input line 
-151.
-
-<Ex3_Figs/500Squ1.png, id=31, 421.575pt x 316.18124pt>
-File: Ex3_Figs/500Squ1.png Graphic file (type png)
-
-<use Ex3_Figs/500Squ1.png>
-Package pdftex.def Info: Ex3_Figs/500Squ1.png used on input line 153.
+Package pdftex.def Info: Ex3_Figs/100Squ1.png used on input line 145.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-160.
+152.
 
+<Ex3_Figs/500Squ1.png, id=28, 421.575pt x 316.18124pt>
 File: Ex3_Figs/500Squ1.png Graphic file (type png)
+
 <use Ex3_Figs/500Squ1.png>
-Package pdftex.def Info: Ex3_Figs/500Squ1.png used on input line 162.
+Package pdftex.def Info: Ex3_Figs/500Squ1.png used on input line 154.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
- [4 <./Ex3_Figs/5Squ1.png (PNG copy)> <./Ex3_Figs/100Squ1.png (PNG copy)> <./Ex
-3_Figs/500Squ1.png (PNG copy)>] [5] (./Report.aux)
+ [3 <./Ex3_Figs/100Sine.png (PNG copy)> <./Ex3_Figs/500Sine.png (PNG copy)> <./
+Ex3_Figs/5Squ1.png (PNG copy)>]
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+161.
+
+<Ex3_Figs/DecExp.png, id=32, 429.10312pt x 338.76563pt>
+File: Ex3_Figs/DecExp.png Graphic file (type png)
+
+<use Ex3_Figs/DecExp.png>
+Package pdftex.def Info: Ex3_Figs/DecExp.png used on input line 163.
+(pdftex.def)             Requested size: 217.42265pt x 171.65164pt.
+ [4 <./Ex3_Figs/100Squ1.png (PNG copy)> <./Ex3_Figs/500Squ1.png (PNG copy)> <./
+Ex3_Figs/DecExp.png (PNG copy)>] (./Report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3423 strings out of 494910
- 44503 string characters out of 6179836
- 112269 words of memory out of 5000000
- 6651 multiletter control sequences out of 15000+600000
+ 3502 strings out of 494910
+ 45538 string characters out of 6179836
+ 114600 words of memory out of 5000000
+ 6725 multiletter control sequences out of 15000+600000
  13966 words of font info for 37 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,5n,32p,728b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -713,10 +749,10 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Report.pdf (5 pages, 330985 bytes).
+Output written on Report.pdf (4 pages, 353725 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 241 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
