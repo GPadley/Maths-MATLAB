@@ -6,7 +6,6 @@ w1 = 2*pi*500; %frequency for the 500 Hz sinusoid
 w2 = 2*pi*100; %frequency for the sinusoid
 w3 = 2*pi*5; %frequency for the sinusoid
 tc = 3*10^-6; %tau for the exponential decay input
-c1 = R/L; c2 = 1/(L*C); %ODE equation constants
 y0 = 0; x0 = 500*10^-9; t0 = 0; %Initial conditions y is current, x is charge and t is time
 h = 0.00001; %step size
 tf = 0.03; %final condition
@@ -21,7 +20,8 @@ ya = zeros(1,N); xa = zeros(1,N); ta = zeros(1,N); in = zeros(1,N);
 xa(1) = x0; ya(1) = y0; ta(1) = t0; in(1) = 5*exp(-0);
 
 for i = 1:N-1
-	[xa(i+1), ya(i+1), ta(i+1)] = RK4second (xa(i), ya(i), h, ta(i),func1, func2);
+	[xa(i+1), ya(i+1)] = RK4second (xa(i), ya(i), h, ta(i),func1, func2);
+    ta(i+1) = ta(i) + h;
     in(i+1) = 5;
 end
 
