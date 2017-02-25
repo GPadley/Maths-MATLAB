@@ -9,9 +9,9 @@ tc = 3*10^-6; %tau for the exponential decay input
 y0 = 0; x0 = 500*10^-9; t0 = 0; %Initial conditions y is current, x is charge and t is time
 h = 0.00001; %step size
 tf = 0.03; %final condition
-
+Vin = @(t) 5;
 func1 = @(x, y, t) y; %y = q'
-func2 = @(x, y, t) 5/L - c1*y - c2*x; %thesecond coupled equation
+func2 = @(x, y, t) (Vin(t) - R*y - x/C)/L; %thesecond coupled equation
 
 N = round((tf-t0)/h);
 
@@ -27,13 +27,15 @@ end
 
 figure;
 Vout = ya.*R;
-subplot(2,1,1);
+subplot(3,1,1);
 plot(ta, Vout);
 grid on;
 xlabel('Time/s'); ylabel('Voltage Out/V');
 title('R*dq/dt with a Step Response')
-subplot(2,1,2);
+subplot(3,1,2);
 plot(ta, in);
 grid on;
 xlabel('Time/s'); ylabel('Voltage In/V');
 title('Step Response')
+subplot(3,1,3)
+plot(ta, xa);
