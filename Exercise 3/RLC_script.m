@@ -17,7 +17,7 @@ N = round((tf-t0)/h);
 
 ya = zeros(1,N); xa = zeros(1,N); ta = zeros(1,N); in = zeros(1,N);
 
-xa(1) = x0; ya(1) = y0; ta(1) = t0; in(1) = 5*exp(-0);
+xa(1) = x0; ya(1) = y0; ta(1) = t0; in(1) = Vin(t0);
 
 for i = 1:N-1
 	[xa(i+1), ya(i+1)] = RK4second (xa(i), ya(i), h, ta(i),func1, func2);
@@ -27,15 +27,13 @@ end
 
 figure;
 Vout = ya.*R;
-subplot(3,1,1);
+subplot(2,1,1);
 plot(ta, Vout);
 grid on;
 xlabel('Time/s'); ylabel('Voltage Out/V');
 title('R*dq/dt with a Step Response')
-subplot(3,1,2);
+subplot(2,1,2);
 plot(ta, in);
 grid on;
 xlabel('Time/s'); ylabel('Voltage In/V');
 title('Step Response')
-subplot(3,1,3)
-plot(ta, xa);

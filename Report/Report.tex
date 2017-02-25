@@ -55,8 +55,9 @@ tc = 3*10^-6; %tau for the exponential decay input
 y0 = 0; x0 = 500*10^-9; t0 = 0; %Initial conditions y = iL, x =qC and t = time
 h = 0.00001; %step size
 tf = 0.03; %final condition
+Vin = @(t) 5;
 func1 = @(x, y, t) y; %y = q'
-func2 = @(x, y, t) (Vin - R*y - x/C)/L; %the second coupled equation
+func2 = @(x, y, t) (Vin(t) - R*y - x/C)/L; %the second coupled equation
 \end{verbatim}
 
 To now evaluate these coupled equations, we use the Runge Kutta 4th order 3/8 algorithm to use these two coupled equations to estimate the next point of the current $i_L$ and the charge $q_C$. The algorithm is:
@@ -94,6 +95,33 @@ end
 \end{verbatim}
 
 This takes in the present value of current and charge a certain time, the time position, the step time and the two functions to evaluate and approximate the next point, which is then outputted at the end.
+
+\begin{verbatim}
+N = round((tf-t0)/h); %calculates number of time steps
+
+ya = zeros(1,N); xa = zeros(1,N);
+ta = zeros(1,N); in = zeros(1,N); %set up arrays
+
+xa(1) = x0; ya(1) = y0; ta(1) = t0; in(1) = Vin(t0); %input initial conditions
+for i = 1:N-1
+	[xa(i+1), ya(i+1)] = RK4second (xa(i), ya(i), h, ta(i),func1, func2);
+    ta(i+1) = ta(i) + h;
+    in(i+1) = 5;
+end
+
+figure;
+Vout = ya.*R;
+subplot(2,1,1);
+plot(ta, Vout);
+grid on;
+xlabel('Time/s'); ylabel('Voltage Out/V');
+title('R*dq/dt with a Step Response')
+subplot(2,1,2);
+plot(ta, in);
+grid on;
+xlabel('Time/s'); ylabel('Voltage In/V');
+title('Step Response')
+\end{verbatim}
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\vspace{-6mm}
