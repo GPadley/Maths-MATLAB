@@ -1,17 +1,15 @@
-function [x,y] = heun(f,xi,yi,xf,h)
-N = round((xf-xi)/h);
-arrx = zeros(1,N);
+function [t,y] = heun(func,t0,y0,tf,h)
+N = round((tf-t0)/h);
+arrt = zeros(1,N);
 arry = zeros(1,N);
-arrx(1) = xi;
-arry(1) = yi;
+arrt(1) = t0;
+arry(1) = y0;
 
 for i = 1:N
-    yp = arry(i) + h*feval(f,arrx(i),arry(i));
-    grad1 = feval(f,arrx(i),arry(i));
-    grad2 = feval(f,arrx(i)+h, yp);
-    yave = 0.5*(grad1 + grad2);
-    arry(i+1) = arry(i) + h*yave;
-    arrx(i+1) = arrx(i) + h;
+    k1 = feval(func, arrt(i), arry(i));
+    k2 = feval(func, arrt(i) + h, arry(i) + k1*h);
+    arry(i+1) = arry(i) + h*0.5*(k1 + k2);
+    arrt(i+1) = arrt(i) + h;
 end
-x= arrx;
+t= arrt;
 y = arry;
