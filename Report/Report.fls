@@ -65,6 +65,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux
 OUTPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux
@@ -146,6 +148,18 @@ INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Squ1.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/DecExp.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/DecExp.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/DecExp.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteTent.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteTent.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteTent.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSine.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSine.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSine.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSineabs.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSineabs.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSineabs.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/sinpi.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/sinpi.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/sinpi.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux
 INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk
 INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk

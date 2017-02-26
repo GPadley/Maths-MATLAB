@@ -12,3 +12,7 @@
 \contentsline {subsubsection}{\numberline {1.5.4}Exponential Decay Input}{6}
 \contentsline {section}{\numberline {2}Exercise 4 - Finite Differences for PDE}{7}
 \contentsline {subsection}{\numberline {2.1}Background}{7}
+\contentsline {subsection}{\numberline {2.2}Script Equations and Constants}{7}
+\contentsline {subsection}{\numberline {2.3}Implementation of the Finite Difference Method}{7}
+\contentsline {subsection}{\numberline {2.4}Finite Difference Graphs}{8}
+\contentsline {subsubsection}{\numberline {2.4.1}0 Boundary Conditions - Conditions Met}{8}

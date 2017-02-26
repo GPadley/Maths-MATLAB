@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.22)  26 FEB 2017 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.22)  26 FEB 2017 18:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -491,21 +491,23 @@ Package: layout 2014/10/28 v1.2c Show layout parameters
 \PositionX=\count139
 \PositionY=\count140
 \ArrowLength=\count141
+) (/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
 ) (/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -595,67 +597,128 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] <Ex3_Figs/RLC.png, id=11, 628.3475pt x 490.83376pt>
 File: Ex3_Figs/RLC.png Graphic file (type png)
  <use Ex3_Figs/RLC.png>
-Package pdftex.def Info: Ex3_Figs/RLC.png used on input line 26.
+Package pdftex.def Info: Ex3_Figs/RLC.png used on input line 27.
 (pdftex.def)             Requested size: 221.95676pt x 173.38216pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 52.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [2 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/RLC.png>] [3] [4] <Ex3_Figs/Step.png, id=30, 421.575pt x 316.18124pt>
 File: Ex3_Figs/Step.png Graphic file (type png)
 
 <use Ex3_Figs/Step.png>
-Package pdftex.def Info: Ex3_Figs/Step.png used on input line 142.
+Package pdftex.def Info: Ex3_Figs/Step.png used on input line 143.
 (pdftex.def)             Requested size: 221.95676pt x 166.47043pt.
  <Ex3_Figs/5Sine2.png, id=31, 421.575pt x 316.18124pt>
 File: Ex3_Figs/5Sine2.png Graphic file (type png)
  <use Ex3_Figs/5Sine2.png>
-Package pdftex.def Info: Ex3_Figs/5Sine2.png used on input line 156.
+Package pdftex.def Info: Ex3_Figs/5Sine2.png used on input line 157.
 (pdftex.def)             Requested size: 221.95676pt x 166.47043pt.
  <Ex3_Figs/100Sine.png, id=32, 421.575pt x 316.18124pt>
 File: Ex3_Figs/100Sine.png Graphic file (type png)
  <use Ex3_Figs/100Sine.png>
-Package pdftex.def Info: Ex3_Figs/100Sine.png used on input line 167.
+Package pdftex.def Info: Ex3_Figs/100Sine.png used on input line 168.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
  <Ex3_Figs/500Sine.png, id=33, 421.575pt x 316.18124pt>
 File: Ex3_Figs/500Sine.png Graphic file (type png)
  <use Ex3_Figs/500Sine.png>
-Package pdftex.def Info: Ex3_Figs/500Sine.png used on input line 176.
+Package pdftex.def Info: Ex3_Figs/500Sine.png used on input line 177.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
  [5 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/Step.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Sine2.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Sine.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Sine.png (PNG copy)>] <Ex3_Figs/5Squ1.png, id=37, 421.575pt x 316.18124pt>
 File: Ex3_Figs/5Squ1.png Graphic file (type png)
  <use Ex3_Figs/5Squ1.png>
-Package pdftex.def Info: Ex3_Figs/5Squ1.png used on input line 189.
+Package pdftex.def Info: Ex3_Figs/5Squ1.png used on input line 190.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
  <Ex3_Figs/100Squ1.png, id=38, 421.575pt x 316.18124pt>
 File: Ex3_Figs/100Squ1.png Graphic file (type png)
  <use Ex3_Figs/100Squ1.png>
-Package pdftex.def Info: Ex3_Figs/100Squ1.png used on input line 199.
+Package pdftex.def Info: Ex3_Figs/100Squ1.png used on input line 200.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
  <Ex3_Figs/500Squ1.png, id=39, 421.575pt x 316.18124pt>
 File: Ex3_Figs/500Squ1.png Graphic file (type png)
  <use Ex3_Figs/500Squ1.png>
-Package pdftex.def Info: Ex3_Figs/500Squ1.png used on input line 209.
+Package pdftex.def Info: Ex3_Figs/500Squ1.png used on input line 210.
 (pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
  <Ex3_Figs/DecExp.png, id=40, 429.10312pt x 338.76563pt>
 File: Ex3_Figs/DecExp.png Graphic file (type png)
  <use Ex3_Figs/DecExp.png>
-Package pdftex.def Info: Ex3_Figs/DecExp.png used on input line 221.
+Package pdftex.def Info: Ex3_Figs/DecExp.png used on input line 222.
 (pdftex.def)             Requested size: 217.42265pt x 171.65164pt.
- [6 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Squ1.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Squ1.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Squ1.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/DecExp.png (PNG copy)>] [7] (/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux) ) 
+ [6 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Squ1.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Squ1.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Squ1.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/DecExp.png (PNG copy)>]
+/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.tex:286: Missing $ inserted.
+<inserted text> 
+                $
+l.286 ...ence of PDE 1D Heat Equation - sin(2 {\pi
+                                                  } x)'
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.tex:286: Extra }, or forgotten $.
+l.286 ...nce of PDE 1D Heat Equation - sin(2 {\pi}
+                                                   x)'
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.tex:286: Missing $ inserted.
+<inserted text> 
+                $
+l.286 ...of PDE 1D Heat Equation - sin(2 {\pi} x)'
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.tex:289: Missing } inserted.
+<inserted text> 
+                }
+l.289 \end{alltt}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[7] <Ex4_Figs/FiniteTent.png, id=51, 429.10312pt x 338.76563pt>
+File: Ex4_Figs/FiniteTent.png Graphic file (type png)
+ <use Ex4_Figs/FiniteTent.png>
+Package pdftex.def Info: Ex4_Figs/FiniteTent.png used on input line 299.
+(pdftex.def)             Requested size: 217.42265pt x 171.65164pt.
+ <Ex4_Figs/FiniteSine.png, id=52, 414.04688pt x 293.59688pt>
+File: Ex4_Figs/FiniteSine.png Graphic file (type png)
+ <use Ex4_Figs/FiniteSine.png>
+Package pdftex.def Info: Ex4_Figs/FiniteSine.png used on input line 302.
+(pdftex.def)             Requested size: 217.42265pt x 154.1765pt.
+ <Ex4_Figs/FiniteSineabs.png, id=53, 421.575pt x 316.18124pt>
+File: Ex4_Figs/FiniteSineabs.png Graphic file (type png)
+ <use Ex4_Figs/FiniteSineabs.png>
+Package pdftex.def Info: Ex4_Figs/FiniteSineabs.png used on input line 305.
+(pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 317.
+
+<Ex4_Figs/sinpi.png, id=54, 421.575pt x 316.18124pt>
+File: Ex4_Figs/sinpi.png Graphic file (type png)
+ <use Ex4_Figs/sinpi.png>
+Package pdftex.def Info: Ex4_Figs/sinpi.png used on input line 319.
+(pdftex.def)             Requested size: 217.42265pt x 163.06914pt.
+ [8 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteTent.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSine.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSineabs.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/sinpi.png (PNG copy)>] (/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux) ) 
 Here is how much of TeX's memory you used:
- 3512 strings out of 494910
- 46169 string characters out of 6179836
- 115569 words of memory out of 5000000
- 6729 multiletter control sequences out of 15000+600000
+ 3547 strings out of 494910
+ 46906 string characters out of 6179836
+ 115797 words of memory out of 5000000
+ 6756 multiletter control sequences out of 15000+600000
  15518 words of font info for 39 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,5n,32p,849b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on "/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.pdf" (7 pages, 395293 bytes).
+ </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on "/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.pdf" (8 pages, 596217 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 389 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

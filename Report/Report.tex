@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{lineno}
 \usepackage{layout}
+\usepackage{alltt}
 \setlength{\voffset}{-0.4in}
 \textheight = 735pt
 \begin{document}
@@ -78,7 +79,7 @@ To now evaluate these coupled equations, we use the Runge Kutta 4th order 3/8 al
 \[x_{i+1} =x_i+\frac{k1_x+3k2_x+3k3_x+k4_x}{8} \hspace{3mm} y_{i+1} =y_i+\frac{k1_y+3k2_y+3k3_y+k4_y}{8}\]
 \[t_{i+1} = t_i + h \hspace{3mm} \text{where h is time step}\]
 
-The way that this works is it takes several different values from around the point you are moving from and using
+The way that this works is it starts from a single point and calculates a gradient to the next point, using this it then creates another slope, this is then repeated twice more using the equations above and a weighting is given to each gradient, summed together and divided by the total weighting to scale it back to uniform size, from this we are able to estimate more accurately where the next point if going to go for this time step.
 
 \subsubsection{Implementation}
 
@@ -235,12 +236,14 @@ For this exercise we were asked to implement the finite difference method for th
 
 \[\frac{\partial y}{\partial t} = \frac{\partial^2 x}{\partial t^2}\ \hspace{5mm} \text{in which} \hspace{5mm} 0 < x < 1, \hspace{5mm} t > 0 \hspace{5mm} \text{and} \hspace{5mm} y(0,t) = y(1,t) = 0 \hspace{2mm} \forall \hspace{2mm} t\]
 
+\subsection{Script Equations and Constants}
+
 \begin{verbatim}
 x0 = 0;
 h = 0.005; %Step size in the X direction
-Vin = @(x) sin(2*pi*x);
+Tin = @(x) sin(2*pi*x);
 Bc = @(t) 0;
-xf = 1 + h; %Final value of X untitledplus one more step to complete the graph
+xf = 1 + h; %Final value of X plus one more step to complete the graph
 t0 = 0; %Initial time value
 k = 0.45*h^2; %v max of 1/2 we use 0.45 work out k relatively, steps in time
 tf = 200*k; %the end time is 250 steps in the k direction
@@ -251,5 +254,71 @@ b = 1 - 2*v; %create the value of beta
 ya = zeros(1,N); xa = zeros(1,N); %create empty arrays
 xa(1) = x0; xa(N) = xf-h;  ya(1) = Bc(0); ya(N) = Bc(0); %initial conditions
 \end{verbatim}
+
+In the script above, we define the step size in the x direction, from this we are then able to calculate k, the step in time. Due to the formula to calculate finite difference:
+
+\[U^{m+1}_j = vU^m_{j-1} +(1-2v)U^m_{j}+vU^m_{j+1} \hspace{5mm} \text{where for stability} \hspace{5mm} v < \frac{1}{2}\]
+
+Therefore by making v = 0.45, thus never becoming unstable, if the x direction step size is changes, we can calculate k by multiplying it by $h^2 \hspace{5mm} \text{due to} \hspace{5mm} v = \frac{k}{h^2} \hspace{5mm} \text{we also replaced the} \hspace{2mm} 1-2v \hspace{2mm} \text{with} \hspace{2mm} \beta $.
+
+\subsection{Implementation of the Finite Difference Method}
+
+\begin{alltt}
+for i = 1:N-2
+    xa(i+1) = xa(i) + h; %next step in x direction
+    ya(i+1) = feval(Tin, xa(i+1)); %calculate heat inital points
+end
+t = t0; %initial time value
+plot(xa, ya, '.', 'markersize', 4); %plot graph at t = 0
+hold on; %plots them all on the same graph
+yn = ya; %to take the next time values
+for a = 1:15 %plots the graph 15 times
+    for i = 1:M %cycle through every time step
+        ya(1) = Bc(t); ya(N) = Bc(t); %set boundary conditions
+	       for j = 2:N-1 %work out temp for next time step
+           yn(j) = v*ya(j-1) + b*ya(j) + v*ya(j+1);
+	       end
+        t = t+k; %change the time one step forward
+        ya = yn; %replace ya with the next time array
+    end
+    plot(xa, ya, '.', 'markersize', 4); %plot heat
+end
+title 'Finite Difference of PDE 1D Heat Equation - sin(2 {\pi} x)'
+xlabel 'Distance/cm'
+ylabel 'Temperature/C'
+\end{alltt}
+
+The way that it works is that we use a for loop to calculate the initial temperature value at each spot on the x axis and place them into the array ya, this then is plotted on a graph to show the initial graph. After that we then use a for loop which runs 15 times so that we are able to plot each graph whilst being able to visualise how it changes as time increases. There is then another for loop in which cycles through every step, in which recalculates the boundary conditions (for the sake of having a time variable boundary conditions). Finally within another for loop it cycles through all the points between the first and last values of temperature and using the finite difference equation stated above. After this ya is replaced with the new calculated array and then the values are plotted on the graph.
+
+\subsection{Finite Difference Graphs}
+
+\subsubsection{0 Boundary Conditions - Conditions Met}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace{-5mm}
+  		\includegraphics[width=0.48\textwidth]{Ex4_Figs/FiniteTent.png}
+	\vspace{-4mm}
+  	\caption{$T_{in}(t)= tent(x)$}
+  		\includegraphics[width=0.48\textwidth]{Ex4_Figs/FiniteSine.png}
+	\vspace{-4mm}
+  	\caption{$T_{in}(t)= sin(2{\pi}x)$}
+    \includegraphics[width=0.48\textwidth]{Ex4_Figs/FiniteSineabs.png}
+    \vspace{-4mm}
+    \caption{$T_{in}(t)= |sin(2{\pi}x)|$}
+  	\label{fig:ex4g1}
+\end{wrapfigure}
+
+As is shown in Figure 10, for the tent function the temperature decreases as it tends towards 0 and 1 from the centre of 0.5. As it steps through time, the heat tries to diffuse evenly within the object, this is shown by as time goes on, the heat decreases within the body and if we were to go further into time, the heat would altogether tend to zero across the body.
+
+\vspace{3mm}In Figure 11 you can see the sine function in which meets the boundary conditions, having `positive' and `negative' temperatures, they have identical characterisics of how the temperature is dissipated. The central point at x = 0.5 remains equal to 0 due to the equation taking both points either side of it and multiplying with v, in which they both have the same magnitude, but different signs so when added together they cancel and cause the temperature to remain at 0 for the time being.
+
+\vspace{3mm}In Figure 12, the absolute value of the sine wave was taken in which the reason it differs with the standard sine curve is that due to now across the centre, on either side the point they are no longer opposite in magnitude, therefore the point at the centre increases in magnitude as the heat disperses across the body, trying to uniformally distribute it.
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+    \vspace{4mm}
+  		\includegraphics[width=0.48\textwidth]{Ex4_Figs/sinpi.png}
+	\vspace{-4mm}
+  	\caption{$T_{in}(t)= sin({\pi}x)$}
+\end{wrapfigure}
 
 \end{document}
