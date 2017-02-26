@@ -103,54 +103,58 @@ ya = zeros(1,N); xa = zeros(1,N);
 ta = zeros(1,N); in = zeros(1,N); %set up arrays
 
 xa(1) = x0; ya(1) = y0; ta(1) = t0; in(1) = Vin(t0); %input initial conditions
-for i = 1:N-1
+for i = 1:N-1 %works out next timestep value
 	[xa(i+1), ya(i+1)] = RK4second (xa(i), ya(i), h, ta(i),func1, func2);
-    ta(i+1) = ta(i) + h;
-    in(i+1) = 5;
+    ta(i+1) = ta(i) + h; %next time step
+    in(i+1) = Vin(ta(i+1)); %next value of the input
 end
 
-figure;
-Vout = ya.*R;
+figure; %sets up the figures
+Vout = R*ya; %Vout = R*iL
 subplot(2,1,1);
-plot(ta, Vout);
+plot(ta, Vout); %plot output Voltage
 grid on;
 xlabel('Time/s'); ylabel('Voltage Out/V');
 title('R*dq/dt with a Step Response')
 subplot(2,1,2);
-plot(ta, in);
+plot(ta, in); %plot input Voltage
 grid on;
 xlabel('Time/s'); ylabel('Voltage In/V');
 title('Step Response')
 \end{verbatim}
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-	\vspace{-6mm}
+\begin{wrapfigure}[13]{r}{0.5\textwidth}
+
+	\vspace{-2mm}
   		\includegraphics[width=0.49\textwidth]{Ex3_Figs/Step.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5$}
   	\label{fig:ex3g1}
+
 \end{wrapfigure}
 
-\vspace{6mm}The step response causes a sudden rise of voltage up to 5 V, due to the inductor not being able to change current instantaneously the voltage out starts from 0 V and as you can see on Figure 2. It increases up to around 1.8 V at this point the capacitor starts to reduce the rate of it charging up due to saturating in charge, as the voltage out starts to tend to 0, the capacitor emits charge causing a negative current through the inductor. As this goes on, the voltage across the capacitor tends to 5 V causing no current to flow through the inductor and the resistor, causing the output voltage to tend to 0 V.
+    \vspace{6mm}The step response causes a sudden rise of voltage up to 5 V, due to the inductor not being able to change current instantaneously the voltage out starts from 0 V and as you can see on Figure 2. It increases up to around 1.8 V at this point the capacitor starts to reduce the rate of it charging up due to saturating in charge, as the voltage out starts to tend to 0, the capacitor emits charge causing a negative current through the inductor. As this goes on, the voltage across the capacitor tends to 5 V causing no current to flow through the inductor and the resistor, causing the output voltage to tend to 0 V.
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-    \vspace{-6mm}
+\begin{wrapfigure}[16]{r!}{0.5\textwidth}
+    \vspace{-5mm}
+
   		\includegraphics[width=0.49\textwidth]{Ex3_Figs/5Sine2.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5sin(2 \pi 5t)$}
   	\label{fig:ex3g2}
+
 \end{wrapfigure}
 
-\vspace{140mm}In Figure 3 the input is a sine wave of amplitude 5 V and a frequency of 5 Hz, as the sine wave moves away from zero it causes a sharp increase in the current going through the inductor and there
+\vspace{8mm}In Figure 3 the input is a sine wave of amplitude 5 V and a frequency of 5 Hz, as the sine wave moves away from zero it causes a sharp increase in the current going through the inductor and therefore causes a sharp rise on the voltage out, this then attenuates to form the shape of a sine wave of amplitude is $\approx 0.1 V$ and leads the input voltage by $\frac{\pi}{2}$ due to complex impedance of an inductor causing a phase shift of $\frac{\pi}{2}$ which is a result of the complex impedance of an inductor is $j\omega L$ and on an argand diagram j in exponential for is $e^{j\frac{\pi}{2}}$. Multiplying the imput and the complex impedance causes the the $\frac{\pi}{2}$ shift resulting in the phase difference. We chose the final time as 0.2 s to show how initially the output changes but then follows the shape of the input eventually.
 
-% \begin{wrapfigure}{r}{0.5\textwidth}
-%   		\includegraphics[width=0.48\textwidth]{Ex3_Figs/100Sine.png}
-% 	\vspace{-6mm}
-%   	\caption{$V_{in}(t)= 5sin(2 \pi 100t)$}
-%   	\label{fig:ex3g3}
-% \end{wrapfigure}
-%
-% sine wave frequency 100 Hz
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace{-5mm}
+  		\includegraphics[width=0.48\textwidth]{Ex3_Figs/100Sine.png}
+	\vspace{-6mm}
+  	\caption{$V_{in}(t)= 5sin(2 \pi 100t)$}
+  	\label{fig:ex3g3}
+\end{wrapfigure}
+\vspace{5mm}In Figure 4 the input is a sine wave of amplitude 5 V and a frequency of 100 Hz, as the sine wave moves away from zero it causes a sharp increase in the current going through the inductor and therefore causes a sharp rise on the voltage out, this then attenuates to form the shape of a sine wave of amplitude is $\approx 0.1 V$ and leads the input voltage by $\frac{\pi}{2}$ due to complex impedance of an inductor causing a phase shift of $\frac{\pi}{2}$ which is a result of the complex impedance of an inductor is $j\omega L$ and on an argand diagram j in exponential for is $e^{j\frac{\pi}{2}}$. Multiplying the imput and the complex impedance causes the the $\frac{\pi}{2}$ shift resulting in the phase difference.
 %
 % \begin{wrapfigure}{r}{0.5\textwidth}
 %   		\includegraphics[width=0.48\textwidth]{Ex3_Figs/500Sine.png}

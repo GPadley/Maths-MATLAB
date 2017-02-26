@@ -9,7 +9,7 @@ tc = 3*10^-6; %tau for the exponential decay input
 y0 = 0; x0 = 500*10^-9; t0 = 0; %Initial conditions y is current, x is charge and t is time
 h = 0.00001; %step size
 tf = 0.03; %final condition
-Vin = @(t) 5;
+Vin = @(t) 5*sin(w2*t);
 func1 = @(x, y, t) y; %y = q'
 func2 = @(x, y, t) (Vin(t) - R*y - x/C)/L; %thesecond coupled equation
 
@@ -22,7 +22,7 @@ xa(1) = x0; ya(1) = y0; ta(1) = t0; in(1) = Vin(t0);
 for i = 1:N-1
 	[xa(i+1), ya(i+1)] = RK4second (xa(i), ya(i), h, ta(i),func1, func2);
     ta(i+1) = ta(i) + h;
-    in(i+1) = 5;
+    in(i+1) = Vin(ta(i+1));
 end
 
 figure;
