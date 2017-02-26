@@ -135,7 +135,7 @@ title('Step Response')
 
     \vspace{6mm}The step response causes a sudden rise of voltage up to 5 V, due to the inductor not being able to change current instantaneously the voltage out starts from 0 V and as you can see on Figure 2. It increases up to around 1.8 V at this point the capacitor starts to reduce the rate of it charging up due to saturating in charge, as the voltage out starts to tend to 0, the capacitor emits charge causing a negative current through the inductor. As this goes on, the voltage across the capacitor tends to 5 V causing no current to flow through the inductor and the resistor, causing the output voltage to tend to 0 V.
 
-\begin{wrapfigure}[16]{r!}{0.5\textwidth}
+\begin{wrapfigure}[13]{r!}{0.5\textwidth}
     \vspace{-5mm}
 
   		\includegraphics[width=0.49\textwidth]{Ex3_Figs/5Sine2.png}
@@ -145,25 +145,26 @@ title('Step Response')
 
 \end{wrapfigure}
 
-\vspace{8mm}In Figure 3 the input is a sine wave of amplitude 5 V and a frequency of 5 Hz, as the sine wave moves away from zero it causes a sharp increase in the current going through the inductor and therefore causes a sharp rise on the voltage out, this then attenuates to form the shape of a sine wave of amplitude is $\approx 0.1 V$ and leads the input voltage by $\frac{\pi}{2}$ due to complex impedance of an inductor causing a phase shift of $\frac{\pi}{2}$ which is a result of the complex impedance of an inductor is $j\omega L$ and on an argand diagram j in exponential for is $e^{j\frac{\pi}{2}}$. Multiplying the imput and the complex impedance causes the the $\frac{\pi}{2}$ shift resulting in the phase difference. We chose the final time as 0.2 s to show how initially the output changes but then follows the shape of the input eventually.
+\vspace{8mm}In Figure 3 the input is a sine wave of amplitude 5 V and a frequency of 5 Hz, as the sine wave moves away from zero it causes a sharp increase in the current going through the inductor and therefore causes a sharp rise on the voltage out, this then attenuates to form the shape of a sine wave of amplitude is $\approx 0.1 V$ and leads the input voltage by a phase difference of $\frac{\pi}{2}$ this is relative to the frequency of the input and the complex impedance of both the inductor and the capacitor being $j\omega L$ and $\frac{1}{j\omega C}$ respectively. We chose the final time as 0.2 s to show how initially the output changes but then follows the shape of the input eventually.
 
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}[16]{r}{0.5\textwidth}
     \vspace{-5mm}
   		\includegraphics[width=0.48\textwidth]{Ex3_Figs/100Sine.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5sin(2 \pi 100t)$}
   	\label{fig:ex3g3}
 \end{wrapfigure}
-\vspace{5mm}In Figure 4 the input is a sine wave of amplitude 5 V and a frequency of 100 Hz, as the sine wave moves away from zero it causes a sharp increase in the current going through the inductor and therefore causes a sharp rise on the voltage out, this then attenuates to form the shape of a sine wave of amplitude is $\approx 0.1 V$ and leads the input voltage by $\frac{\pi}{2}$ due to complex impedance of an inductor causing a phase shift of $\frac{\pi}{2}$ which is a result of the complex impedance of an inductor is $j\omega L$ and on an argand diagram j in exponential for is $e^{j\frac{\pi}{2}}$. Multiplying the imput and the complex impedance causes the the $\frac{\pi}{2}$ shift resulting in the phase difference.
-%
-% \begin{wrapfigure}{r}{0.5\textwidth}
-%   		\includegraphics[width=0.48\textwidth]{Ex3_Figs/500Sine.png}
-% 	\vspace{-6mm}
-%   	\caption{$V_{in}(t)= 5sin(2 \pi 500t)$}
-%   	\label{fig:ex3g4}
-% \end{wrapfigure}
-%
-% sine wave frequency 100 Hz
+\vspace{10mm}In Figure 4 the input is a sine wave of amplitude 5 V and a frequency of 100 Hz. Upon the start of the wave, the output voltage rises slower than the voltage of the input, due to the fact that the rate of change of the inductor current cannot shange instantaneously and will eventually equal the frequency of the input. This causes a slight phase difference and the amplitude is far greater than the 5 Hz input, resulting in an amplitude of $\approx 4 V$. This greater output voltage is due to being a band pass filter, low frequencies as we can see, 5 Hz for example attenuate to a value close to 0 V whereas at this frequency the output voltage is close to the input voltage and at some frequency greater than this, the same result as the 5 Hz wave will be apparent.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace{-7mm}
+  		\includegraphics[width=0.48\textwidth]{Ex3_Figs/500Sine.png}
+	\vspace{-6mm}
+  	\caption{$V_{in}(t)= 5sin(2 \pi 500t)$}
+  	\label{fig:ex3g4}
+\end{wrapfigure}
+
+\vspace{2mm}In Figure 4 the input is a sine wave of amplitude 5 V and a frequency of 500 Hz. Upon the start of the wave, the output voltage rises slower than the voltage of the input, due to the fact that the rate of change of the inductor current cannot shange instantaneously and will eventually equal the frequency of the input. This causes a slight phase difference and the amplitude is far greater than the 5 Hz input, resulting in an amplitude of $\approx 4 V$. This greater output voltage is due to being a high pass filter, low frequencies as we can see, 5 Hz for example attenuate to a value close to 0 V whereas at this frequency the output voltage is close to the input voltage.
 %
 % \begin{wrapfigure}{r}{0.5\textwidth}
 %   		\includegraphics[width=0.48\textwidth]{Ex3_Figs/5Squ1.png}

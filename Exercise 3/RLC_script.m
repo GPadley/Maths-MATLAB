@@ -8,8 +8,8 @@ w3 = 2*pi*5; %frequency for the sinusoid
 tc = 3*10^-6; %tau for the exponential decay input
 y0 = 0; x0 = 500*10^-9; t0 = 0; %Initial conditions y is current, x is charge and t is time
 h = 0.00001; %step size
-tf = 0.03; %final condition
-Vin = @(t) 5*sin(w2*t);
+tf = 0.015; %final condition
+Vin = @(t) 5*sin(w1*t);
 func1 = @(x, y, t) y; %y = q'
 func2 = @(x, y, t) (Vin(t) - R*y - x/C)/L; %thesecond coupled equation
 
@@ -31,9 +31,9 @@ subplot(2,1,1);
 plot(ta, Vout);
 grid on;
 xlabel('Time/s'); ylabel('Voltage Out/V');
-title('R*dq/dt with a Step Response')
+title('R*dq/dt with a 500 Hz Sine Wave Input')
 subplot(2,1,2);
 plot(ta, in);
 grid on;
 xlabel('Time/s'); ylabel('Voltage In/V');
-title('Step Response')
+title('500 Hz Sine Wave Input')
