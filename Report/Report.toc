@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Exercise 3 - RLC Circuit}{2}
+\contentsline {subsection}{\numberline {1.1}Background}{2}
+\contentsline {subsection}{\numberline {1.2}Script Coupled Equations and Constants}{2}
+\contentsline {subsection}{\numberline {1.3}4th Order Runge Kutta 3/8 Algorithm}{2}
+\contentsline {subsubsection}{\numberline {1.3.1}Theory}{2}
+\contentsline {subsubsection}{\numberline {1.3.2}Implementation}{3}
+\contentsline {subsection}{\numberline {1.4}RLC\_Script.m Implementation}{3}
+\contentsline {subsection}{\numberline {1.5}Exercise 3 Graphs}{5}
+\contentsline {subsubsection}{\numberline {1.5.1}Step Response}{5}
+\contentsline {subsubsection}{\numberline {1.5.2}Sine Wave Input}{5}
+\contentsline {subsubsection}{\numberline {1.5.3}Square Wave Inputs}{6}
+\contentsline {subsubsection}{\numberline {1.5.4}Exponential Decay Input}{6}
+\contentsline {section}{\numberline {2}Exercise 4 - Finite Differences for PDE}{7}
+\contentsline {subsection}{\numberline {2.1}Background}{7}

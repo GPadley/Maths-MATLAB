@@ -13,7 +13,7 @@ M = round((tf - t0)/k); %number of steps in the t direction
 v = k/(h^2); %recalculating the value of v
 b = 1 - 2*v; %create the value of beta
 ya = zeros(1,N); xa = zeros(1,N); %create empty arrays
-xa(1) = x0; xa(N) = xf-h; ya(1) = Bc(0); ya(N) = Bc(0); %initialising the initial conditions
+xa(1) = x0; xa(N) = xf-h; %initialising the initial conditions
 
 for i = 1:N-2 
     xa(i+1) = xa(i) + h; %next step in x direction 
@@ -30,12 +30,12 @@ for a = 1:15 %plots the graph 15 times
             yn(j) = v*ya(j-1) + b*ya(j) + v*ya(j+1);
 		end
 		t = t+k; %change the time one step forward
-        ya = yn; %replace ya with the next time array
+        ya = yn;
     end
-    plot(xa, ya, '.', 'markersize', 4); %plot heat
+    plot(xa, ya, '.', 'markersize', 4);
 end
 title 'Finite Difference of PDE 1D Heat Equation - sin(2πx)'
 xlabel 'Distance/cm'
 ylabel 'Temperature/°C'
-xlim([0, 1]); %keeps axis in place
+xlim([0, 1]);
 ylim([-1, 1]);
