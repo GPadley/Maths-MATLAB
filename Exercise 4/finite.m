@@ -2,7 +2,7 @@ clear;
 close all;
 x0 = 0;
 h = 0.005; %Step size in the X direction
-Vin = @(x) sin(2*pi*x);
+Vin = @(x) -40*x*(x-0.3)*(x-1)*(x-0.5);
 Bc = @(t) 0;
 xf = 1 + h; %Final value of X untitledplus one more step to complete the graph
 t0 = 0; %Initial time value
@@ -34,8 +34,7 @@ for a = 1:15 %plots the graph 15 times
     end
     plot(xa, ya, '.', 'markersize', 4); %plot heat
 end
-title 'Finite Difference of PDE 1D Heat Equation - sin(2πx)'
+title 'Finite Difference of 1D Heat Equation - -80x^4+144x^3-76x^2+12x'
 xlabel 'Distance/cm'
 ylabel 'Temperature/°C'
-xlim([0, 1]); %keeps axis in place
-ylim([-1, 1]);
+xlim([0, 1]);

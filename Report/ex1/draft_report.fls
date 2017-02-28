@@ -1,41 +1,40 @@
-PWD /home/george/Documents/Year 2/Maths-MATLAB/Report
+PWD /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.tex
-OUTPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.log
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1/draft_report.tex
+OUTPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1/draft_report.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -66,11 +65,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/layout.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux
-OUTPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1/draft_report.aux
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1/draft_report.aux
+OUTPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1/draft_report.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
@@ -108,75 +105,20 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.toc
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.toc
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-OUTPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.toc
-OUTPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.pdf
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1/RL_circuit.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1/RL_circuit.png
+OUTPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1/draft_report.pdf
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1/RL_circuit.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/RLC.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/RLC.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/RLC.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1095.tfm
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/Step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/Step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/Step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Sine2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Sine2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Sine2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Sine.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Sine.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Sine.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Sine.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Sine.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Sine.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Squ1.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Squ1.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Squ1.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Squ1.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Squ1.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Squ1.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Squ1.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Squ1.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Squ1.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/DecExp.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/DecExp.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/DecExp.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteTent.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteTent.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteTent.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSine.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSine.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSine.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSineabs.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSineabs.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSineabs.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/sinpi.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/sinpi.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/sinpi.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux
-INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk
-INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk
-INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk
-INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/ex1/draft_report.aux
+INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk
 INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
 INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk
 INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

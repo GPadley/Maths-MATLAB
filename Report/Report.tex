@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[top=0in, bottom=0.5in,margin=1in, includefoot]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -137,10 +137,10 @@ title('Step Response')
 \subsection{Exercise 3 Graphs}
 \subsubsection{Step Response}
 
-\begin{wrapfigure}[13]{r}{0.5\textwidth}
+\begin{wrapfigure}[13]{r}{0.46\textwidth}
 
 	\vspace{-6mm}
-  		\includegraphics[width=0.49\textwidth]{Ex3_Figs/Step.png}
+  		\includegraphics[width=0.45\textwidth]{Ex3_Figs/Step.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5$}
   	\label{fig:ex3g1}
@@ -151,10 +151,10 @@ title('Step Response')
 
 \subsubsection{Sine Wave Input}
 
-\begin{wrapfigure}[13]{r!}{0.5\textwidth}
-    \vspace{-7mm}
+\begin{wrapfigure}[13]{r!}{0.46\textwidth}
+    \vspace{-10mm}
 
-  		\includegraphics[width=0.49\textwidth]{Ex3_Figs/5Sine2.png}
+  		\includegraphics[width=0.45\textwidth]{Ex3_Figs/5Sine2.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5sin(2 \pi 5t)$}
   	\label{fig:ex3g2}
@@ -163,18 +163,18 @@ title('Step Response')
 
 \vspace{0mm}In Figure 3 the input is a sine wave of amplitude 5 V and a frequency of 5 Hz, as the sine wave moves away from zero it causes a sharp increase in the current going through the inductor and therefore causes a sharp rise on the voltage out, this then attenuates to form the shape of a sine wave of amplitude is $\approx 0.1$ V and leads the input voltage by a phase difference of $\frac{\pi}{2}$ this is relative to the frequency of the input and the complex impedance of both the inductor and the capacitor being $j\omega L$ and $\frac{1}{j\omega C}$ respectively. We chose the final time as 0.2 s to show how initially the output changes but then follows the shape of the input eventually.
 
-\begin{wrapfigure}[16]{r}{0.5\textwidth}
-    \vspace{-5mm}
-  		\includegraphics[width=0.48\textwidth]{Ex3_Figs/100Sine.png}
+\begin{wrapfigure}[16]{r}{0.46\textwidth}
+    \vspace{-15mm}
+  		\includegraphics[width=0.45\textwidth]{Ex3_Figs/100Sine.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5sin(2 \pi 100t)$}
   	\label{fig:ex3g3}
 \end{wrapfigure}
 \vspace{6mm}In Figure 4 the input is a sine wave of amplitude 5 V and a frequency of 100 Hz. Upon the start of the wave, the output voltage rises slower than the voltage of the input, due to the fact that the rate of change of the inductor current cannot shange instantaneously and will eventually equal the frequency of the input. This causes a slight phase difference and the amplitude is far greater than the 5 Hz input, resulting in an amplitude of $\approx 4$ V. This greater output voltage is due to being a band pass filter, low frequencies as we can see, 5 Hz for example attenuate to a value close to 0 V whereas at this frequency the output voltage is close to the input voltage and at some frequency greater than this, the same result as the 5 Hz wave will be apparent.
 
-\begin{wrapfigure}[11]{r}{0.5\textwidth}
-    \vspace{-12mm}
-  		\includegraphics[width=0.48\textwidth]{Ex3_Figs/500Sine.png}
+\begin{wrapfigure}[11]{r}{0.46\textwidth}
+    \vspace{-33mm}
+  		\includegraphics[width=0.45\textwidth]{Ex3_Figs/500Sine.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5sin(2 \pi 500t)$}
   	\label{fig:ex3g4}
@@ -185,9 +185,9 @@ title('Step Response')
 \pagebreak
 \subsubsection{Square Wave Inputs}
 
-\begin{wrapfigure}[11]{r}{0.5\textwidth}
+\begin{wrapfigure}[11]{r}{0.46\textwidth}
     \vspace{-7mm}
-  		\includegraphics[width=0.48\textwidth]{Ex3_Figs/5Squ1.png}
+  		\includegraphics[width=0.45\textwidth]{Ex3_Figs/5Squ1.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5square(2 \pi 5t)$}
   	\label{fig:ex3g5}
@@ -195,9 +195,9 @@ title('Step Response')
 
 \vspace{3mm}In Figure 6 the input is a square wave of frequency 5 Hz and amplitude 5 V. At this frequency, the response is identical to the response of a step response due to there being enough time for the wave to return to 0 V after the change in amplitude, the only difference is when the voltage drops to -5 V the step response is equal to the positive step response but negative. The time scale was chosen to show 1 and a quarter wavelengths so that it is easy to see that each time the sign changes, the response is identical.
 
-\begin{wrapfigure}[8]{r}{0.5\textwidth}
+\begin{wrapfigure}[8]{r}{0.46\textwidth}
     \vspace{-6mm}
-  		\includegraphics[width=0.48\textwidth]{Ex3_Figs/100Squ1.png}
+  		\includegraphics[width=0.45\textwidth]{Ex3_Figs/100Squ1.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5square(2 \pi 100t)$}
   	\label{fig:ex3g6}
@@ -205,9 +205,9 @@ title('Step Response')
 
 \vspace{15mm}In Figure 7 the input is a square wave of frequency 100 Hz and amplitude 5 V. At this frequency, the output follows the characteristic of a sine wave due to the step response giving a sinusoidal peak, this is repeated but switched in direction as the sign of the input changes, causing a periodic signal on the output respresenting something somewhat similar to a sine wave.
 
-\begin{wrapfigure}[17]{r}{0.5\textwidth}
+\begin{wrapfigure}[17]{r}{0.46\textwidth}
     \vspace{7mm}
-  		\includegraphics[width=0.48\textwidth]{Ex3_Figs/500Squ1.png}
+  		\includegraphics[width=0.45\textwidth]{Ex3_Figs/500Squ1.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5square(2 \pi 500t)$}
   	\label{fig:ex3g7}
@@ -217,9 +217,9 @@ title('Step Response')
 
 \subsubsection{Exponential Decay Input}
 
-\begin{wrapfigure}[9]{r}{0.5\textwidth}
+\begin{wrapfigure}[9]{r}{0.46\textwidth}
     \vspace{-7mm}
-  		\includegraphics[width=0.48\textwidth]{Ex3_Figs/DecExp.png}
+  		\includegraphics[width=0.45\textwidth]{Ex3_Figs/DecExp.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5e^{\frac{-t^2}{\tau_C}}$}
   	\label{fig:ex3g8}
@@ -282,8 +282,8 @@ for a = 1:15 %plots the graph 15 times
         ya = yn; %replace ya with the next time array
     end
     plot(xa, ya, '.', 'markersize', 4); %plot heat
+    title 'Finite Difference of PDE 1D Heat Equation - '
 end
-title 'Finite Difference of PDE 1D Heat Equation - sin(2 {\pi} x)'
 xlabel 'Distance/cm'
 ylabel 'Temperature/C'
 \end{alltt}
@@ -292,20 +292,21 @@ The way that it works is that we use a for loop to calculate the initial tempera
 
 \subsection{Finite Difference Graphs}
 
-\subsubsection{0 Boundary Conditions - Conditions Met}
-
-\begin{wrapfigure}{r}{0.5\textwidth}
-    \vspace{-5mm}
-  		\includegraphics[width=0.48\textwidth]{Ex4_Figs/FiniteTent.png}
+\begin{wrapfigure}{r}{0.50\textwidth}
+    \vspace{-13mm}
+  		\includegraphics[width=0.45\textwidth]{Ex4_Figs/FiniteTent.png}
 	\vspace{-4mm}
   	\caption{$T_{in}(t)= tent(x)$}
-  		\includegraphics[width=0.48\textwidth]{Ex4_Figs/FiniteSine.png}
+  		\includegraphics[width=0.45\textwidth]{Ex4_Figs/FiniteSine.png}
 	\vspace{-4mm}
   	\caption{$T_{in}(t)= sin(2{\pi}x)$}
-    \includegraphics[width=0.48\textwidth]{Ex4_Figs/FiniteSineabs.png}
+    \includegraphics[width=0.45\textwidth]{Ex4_Figs/FiniteSineabs.png}
     \vspace{-4mm}
     \caption{$T_{in}(t)= |sin(2{\pi}x)|$}
   	\label{fig:ex4g1}
+    \includegraphics[width=0.45\textwidth]{Ex4_Figs/sinpi.png}
+    \vspace{-4mm}
+    \caption{$T_{in}(t)= sin({\pi}x)$}
 \end{wrapfigure}
 
 As is shown in Figure 10, for the tent function the temperature decreases as it tends towards 0 and 1 from the centre of 0.5. As it steps through time, the heat tries to diffuse evenly within the object, this is shown by as time goes on, the heat decreases within the body and if we were to go further into time, the heat would altogether tend to zero across the body.
@@ -314,11 +315,7 @@ As is shown in Figure 10, for the tent function the temperature decreases as it 
 
 \vspace{3mm}In Figure 12, the absolute value of the sine wave was taken in which the reason it differs with the standard sine curve is that due to now across the centre, on either side the point they are no longer opposite in magnitude, therefore the point at the centre increases in magnitude as the heat disperses across the body, trying to uniformally distribute it.
 
-\begin{wrapfigure}{l}{0.5\textwidth}
-    \vspace{4mm}
-  		\includegraphics[width=0.48\textwidth]{Ex4_Figs/sinpi.png}
-	\vspace{-4mm}
-  	\caption{$T_{in}(t)= sin({\pi}x)$}
-\end{wrapfigure}
+\vspace{3mm} In Figure 13, the input is half of a sine wave in which you can simply see as time goes on, throughout the body, the heat dissipates, tending towards 0.
+
 
 \end{document}

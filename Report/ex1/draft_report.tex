@@ -21,7 +21,7 @@
 \maketitle
 
 \section*{Exercise 1}\vspace{-1mm}
-    
+
 \begin{wrapfigure}{r}{0.5\textwidth}
 \vspace{-10mm}
 \includegraphics[width=0.49\textwidth]{RL_circuit.png}
@@ -30,19 +30,19 @@
 \label{fig:RL}
 \end{wrapfigure}
 
-This simple RL circuit forms a high pass filter circuit which takes an input signal Vin and only allows the high frequency components to pass. Despite the inductor being less convenient than a capacitor, this RL circuit can approach the model of a DC motor. In this specific case, we want to model a DC motor with inertia 250 $\mu$sNm/s$^2$ and $T_{max} = 50mNm/A$. To do so, according to KCL, we know that 
-\[Vin(t) = v_L(t) + v_R(t)\] 
+This simple RL circuit forms a high pass filter circuit which takes an input signal Vin and only allows the high frequency components to pass. Despite the inductor being less convenient than a capacitor, this RL circuit can approach the model of a DC motor. In this specific case, we want to model a DC motor with inertia 250 $\mu$sNm/s$^2$ and $T_{max} = 50mNm/A$. To do so, according to KCL, we know that
+\[Vin(t) = v_L(t) + v_R(t)\]
 
-and therefore: 
+and therefore:
 
 \[ V_{in}(t) = L\frac{d}{dt}i_L(t) + R i_L(t) \]
 
-\\ $i_L(t)$ is the state that we will solve following the three different second-order Runge Kutta methods.
+$i_L(t)$ is the state that we will solve following the three different second-order Runge Kutta methods.
 
 All methods follow the same pattern:
 
-\[x_{i+1} = x_i + h\] 
-$h$ being the step size and 
+\[x_{i+1} = x_i + h\]
+$h$ being the step size and
 \[y_{i+1} = y_i + h (a k_1 + b k_2)\]
 
 where
@@ -53,26 +53,26 @@ where
 and the values of $a, b, p$ and $q$ depend on which method we are using:
 
 \begin{center}
- \begin{tabular}{||c | c c c||} 
+ \begin{tabular}{||c | c c c||}
  \hline
- Parameter & Heuns & Midpoint & Ralston \\ [0.5ex] 
+ Parameter & Heuns & Midpoint & Ralston \\ [0.5ex]
  \hline\hline
- a & 1/2 & 0 & 1/4 \\ 
+ a & 1/2 & 0 & 1/4 \\
  \hline
  b & 1/2 & 1 & 3/4 \\
  \hline
  p & 1 & 1/2 & 2/3 \\
  \hline
- q & 1 & 1/2 & 2/3 \\ [1ex] 
+ q & 1 & 1/2 & 2/3 \\ [1ex]
  \hline
 \end{tabular}
 \end{center}
 
-Each method will approximate the exact solution according to these parameters. Therefore, the smaller the step size $h$, the more exact the method will approximate the solution.\\
+Each method will approximate the exact solution according to these parameters. Therefore, the smaller the step size $h$, the more exact the method will approximate the solution.
 
- After doing so, the output value will be obtained as follows: 
+ After doing so, the output value will be obtained as follows:
 
-\[V_{out} = V_{in}(t) - R i_L(t)\]. \\
+\[V_{out} = V_{in}(t) - R i_L(t)\]
 
 
 
