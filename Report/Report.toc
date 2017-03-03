@@ -5,13 +5,17 @@
 \contentsline {subsubsection}{\numberline {1.3.1}Theory}{3}
 \contentsline {subsubsection}{\numberline {1.3.2}Implementation}{3}
 \contentsline {subsection}{\numberline {1.4}RLC\_Script.m Implementation}{4}
-\contentsline {subsection}{\numberline {1.5}Exercise 3 Graphs}{5}
-\contentsline {subsubsection}{\numberline {1.5.1}Step Response}{5}
-\contentsline {subsubsection}{\numberline {1.5.2}Sine Wave Input}{5}
-\contentsline {subsubsection}{\numberline {1.5.3}Square Wave Inputs}{7}
-\contentsline {subsubsection}{\numberline {1.5.4}Exponential Decay Input}{7}
-\contentsline {section}{\numberline {2}Exercise 4 - Finite Differences for PDE}{9}
-\contentsline {subsection}{\numberline {2.1}Background}{9}
-\contentsline {subsection}{\numberline {2.2}Script Equations and Constants}{9}
-\contentsline {subsection}{\numberline {2.3}Implementation of the Finite Difference Method}{9}
-\contentsline {subsection}{\numberline {2.4}Finite Difference Graphs}{10}
+\contentsline {subsection}{\numberline {1.5}Exercise 3 Graphs}{4}
+\contentsline {subsubsection}{\numberline {1.5.1}Step Response}{4}
+\contentsline {subsubsection}{\numberline {1.5.2}Sine Wave Input}{4}
+\contentsline {subsubsection}{\numberline {1.5.3}Square Wave Inputs}{5}
+\contentsline {subsubsection}{\numberline {1.5.4}Exponential Decay Input}{6}
+\contentsline {section}{\numberline {2}Exercise 4 - Finite Differences for PDE}{7}
+\contentsline {subsection}{\numberline {2.1}Background}{7}
+\contentsline {subsection}{\numberline {2.2}Script Equations and Constants}{7}
+\contentsline {subsection}{\numberline {2.3}Implementation of the Finite Difference Method}{7}
+\contentsline {subsection}{\numberline {2.4}Finite Difference Graphs}{8}
+\contentsline {subsection}{\numberline {2.5}Bonus Exercises}{9}
+\contentsline {subsubsection}{\numberline {2.5.1}Boundary Conditions Not Met}{9}
+\contentsline {subsubsection}{\numberline {2.5.2}Non Zero Boundary Conditions}{9}
+\contentsline {subsubsection}{\numberline {2.5.3}Time Varying Boundary Conditions}{10}

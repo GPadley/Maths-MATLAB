@@ -2,8 +2,8 @@ clear;
 close all;
 x0 = 0;
 h = 0.005; %Step size in the X direction
-Vin = @(x) -40*x*(x-0.3)*(x-1)*(x-0.5);
-Bc = @(t) 0;
+Vin = @(x) tent(x);
+Bc = @(t) 20*t;
 xf = 1 + h; %Final value of X untitledplus one more step to complete the graph
 t0 = 0; %Initial time value
 k = 0.45*h^2; %due to v being max of 1/2 we use 0.45 and work out k relative to that, steps in time
@@ -34,7 +34,7 @@ for a = 1:15 %plots the graph 15 times
     end
     plot(xa, ya, '.', 'markersize', 4); %plot heat
 end
-title 'Finite Difference of 1D Heat Equation - -80x^4+144x^3-76x^2+12x'
+title 'Finite Difference of 1D Heat Equation -40x^4+72x^3-38x^2+6x'
 xlabel 'Distance/cm'
 ylabel 'Temperature/°C'
 xlim([0, 1]);

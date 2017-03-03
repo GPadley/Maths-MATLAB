@@ -11,6 +11,7 @@
 \usepackage{lineno}
 \usepackage{layout}
 \usepackage{alltt}
+\usepackage[justification=centering]{caption}
 \setlength{\voffset}{-0.4in}
 \textheight = 735pt
 \begin{document}
@@ -88,7 +89,7 @@ To implement this into MATLAB we created a function called `RK4second.m' in whic
 \begin{verbatim}
 function [xout, yout] = RK4second (xin, yin, h, tin, func1, func2)
 
-	k1x = h*feval(func1, xin ,yin, tin); %approx the first consts for RK4th ord 3/8 Method
+	k1x = h*feval(func1, xin ,yin, tin); %approx consts for RK4th ord 3/8 Method
 k1y = h*feval(func2, xin ,yin, tin);
 	k2x = h*feval(func1, xin + k1x/3, yin + k1y/3, tin+h/3);
 	k2y = h*feval(func2, xin + k1x/3, yin + k1y/3, tin+h/3);
@@ -132,8 +133,6 @@ xlabel('Time/s'); ylabel('Voltage In/V');
 title('Step Response')
 \end{verbatim}
 
-\pagebreak
-
 \subsection{Exercise 3 Graphs}
 \subsubsection{Step Response}
 
@@ -152,7 +151,7 @@ title('Step Response')
 \subsubsection{Sine Wave Input}
 
 \begin{wrapfigure}[13]{r!}{0.46\textwidth}
-    \vspace{-10mm}
+    \vspace{-5mm}
 
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/5Sine2.png}
 	\vspace{-6mm}
@@ -170,6 +169,7 @@ title('Step Response')
   	\caption{$V_{in}(t)= 5sin(2 \pi 100t)$}
   	\label{fig:ex3g3}
 \end{wrapfigure}
+
 \vspace{6mm}In Figure 4 the input is a sine wave of amplitude 5 V and a frequency of 100 Hz. Upon the start of the wave, the output voltage rises slower than the voltage of the input, due to the fact that the rate of change of the inductor current cannot shange instantaneously and will eventually equal the frequency of the input. This causes a slight phase difference and the amplitude is far greater than the 5 Hz input, resulting in an amplitude of $\approx 4$ V. This greater output voltage is due to being a band pass filter, low frequencies as we can see, 5 Hz for example attenuate to a value close to 0 V whereas at this frequency the output voltage is close to the input voltage and at some frequency greater than this, the same result as the 5 Hz wave will be apparent.
 
 \begin{wrapfigure}[11]{r}{0.46\textwidth}
@@ -182,11 +182,10 @@ title('Step Response')
 
 \vspace{2mm}In Figure 5 the input is a sine wave of amplitude 5 V and a frequency of 500 Hz. The response is very similar to Figure 3's output signal, rising initially to a value that is greater than its steady state amplitude in which is $\approx 0.5$ V which is far 10 times less than the input amplitude, and less than the the amplitude of the Figure 4. This suggests that the center of the band pass filter is based around 100 Hz as is seen in Figure 4 and therefore the outer bounds falling in amplitude at frequencies greater and less than this.
 
-\pagebreak
 \subsubsection{Square Wave Inputs}
 
 \begin{wrapfigure}[11]{r}{0.46\textwidth}
-    \vspace{-7mm}
+    \vspace{-40mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/5Squ1.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5square(2 \pi 5t)$}
@@ -196,29 +195,29 @@ title('Step Response')
 \vspace{3mm}In Figure 6 the input is a square wave of frequency 5 Hz and amplitude 5 V. At this frequency, the response is identical to the response of a step response due to there being enough time for the wave to return to 0 V after the change in amplitude, the only difference is when the voltage drops to -5 V the step response is equal to the positive step response but negative. The time scale was chosen to show 1 and a quarter wavelengths so that it is easy to see that each time the sign changes, the response is identical.
 
 \begin{wrapfigure}[8]{r}{0.46\textwidth}
-    \vspace{-6mm}
+    \vspace{-40mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/100Squ1.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5square(2 \pi 100t)$}
   	\label{fig:ex3g6}
 \end{wrapfigure}
 
-\vspace{15mm}In Figure 7 the input is a square wave of frequency 100 Hz and amplitude 5 V. At this frequency, the output follows the characteristic of a sine wave due to the step response giving a sinusoidal peak, this is repeated but switched in direction as the sign of the input changes, causing a periodic signal on the output respresenting something somewhat similar to a sine wave.
+\vspace{5mm}In Figure 7 the input is a square wave of frequency 100 Hz and amplitude 5 V. At this frequency, the output follows the characteristic of a sine wave due to the step response giving a sinusoidal peak, this is repeated but switched in direction as the sign of the input changes, causing a periodic signal on the output respresenting something somewhat similar to a sine wave.
 
 \begin{wrapfigure}[17]{r}{0.46\textwidth}
-    \vspace{7mm}
+    \vspace{-5mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/500Squ1.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5square(2 \pi 500t)$}
   	\label{fig:ex3g7}
 \end{wrapfigure}
 
-\vspace{14mm}In Figure 8, the input is a square wave of frequency 500 Hz and amplitude 5 V. At this frequency, the step responses cause an output signal which is similar to a periodic tent function of exponential charge and discharge, this is due to the fact that the square wave changes sign too rapidly for the signal to smooth off or return to zero before the next half wavelength. As it gets to the 4th period of the input, the output settles to an amplitude of $\approx 1$ V. In which looking back over Figures 6, 7 and 8. The bandpass filter seems to give similar changes in output amplitude relative to the input amplitude, where at 100 Hz, in Figure 7 the magnitude is greater than both magnitudes. Confirming that the center frequency if based around 100 Hz and the bandwidth is based between 5 Hz and 500 Hz.
+\vspace{5mm}In Figure 8, the input is a square wave of frequency 500 Hz and amplitude 5 V. At this frequency, the step responses cause an output signal which is similar to a periodic tent function of exponential charge and discharge, this is due to the fact that the square wave changes sign too rapidly for the signal to smooth off or return to zero before the next half wavelength. As it gets to the 4th period of the input, the output settles to an amplitude of $\approx 1$ V. In which looking back over Figures 6, 7 and 8. The bandpass filter seems to give similar changes in output amplitude relative to the input amplitude, where at 100 Hz, in Figure 7 the magnitude is greater than both magnitudes. Confirming that the center frequency if based around 100 Hz and the bandwidth is based between 5 Hz and 500 Hz.
 
 \subsubsection{Exponential Decay Input}
 
 \begin{wrapfigure}[9]{r}{0.46\textwidth}
-    \vspace{-7mm}
+    \vspace{-23mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/DecExp.png}
 	\vspace{-6mm}
   	\caption{$V_{in}(t)= 5e^{\frac{-t^2}{\tau_C}}$}
@@ -259,7 +258,7 @@ In the script above, we define the step size in the x direction, from this we ar
 
 \[U^{m+1}_j = vU^m_{j-1} +(1-2v)U^m_{j}+vU^m_{j+1} \hspace{5mm} \text{where for stability} \hspace{5mm} v < \frac{1}{2}\]
 
-Therefore by making v = 0.45, thus never becoming unstable, if the x direction step size is changes, we can calculate k by multiplying it by $h^2 \hspace{5mm} \text{due to} \hspace{5mm} v = \frac{k}{h^2} \hspace{5mm} \text{we also replaced the} \hspace{2mm} 1-2v \hspace{2mm} \text{with} \hspace{2mm} \beta $.
+Therefore by making v = 0.45, thus never becoming unstable, if the x direction step size is changes, we can calculate k by multiplying it by $h^2 \hspace{5mm} \text{due to} \hspace{5mm} v = \frac{k}{h^2} \hspace{5mm} \text{we also replaced} \hspace{2mm} 1-2v \hspace{2mm} \text{with} \hspace{2mm} \beta $.
 
 \subsection{Implementation of the Finite Difference Method}
 
@@ -292,21 +291,18 @@ The way that it works is that we use a for loop to calculate the initial tempera
 
 \subsection{Finite Difference Graphs}
 
-\begin{wrapfigure}{r}{0.50\textwidth}
+\begin{wrapfigure}[28]{r}{0.50\textwidth}
     \vspace{-13mm}
   		\includegraphics[width=0.45\textwidth]{Ex4_Figs/FiniteTent.png}
 	\vspace{-4mm}
-  	\caption{$T_{in}(t)= tent(x)$}
+  	\caption{$T_{in}(x)= tent(x)$}
   		\includegraphics[width=0.45\textwidth]{Ex4_Figs/FiniteSine.png}
 	\vspace{-4mm}
-  	\caption{$T_{in}(t)= sin(2{\pi}x)$}
+  	\caption{$T_{in}(x)= sin(2{\pi}x)$}
     \includegraphics[width=0.45\textwidth]{Ex4_Figs/FiniteSineabs.png}
     \vspace{-4mm}
-    \caption{$T_{in}(t)= |sin(2{\pi}x)|$}
+    \caption{$T_{in}(x)= |sin(2{\pi}x)|$}
   	\label{fig:ex4g1}
-    \includegraphics[width=0.45\textwidth]{Ex4_Figs/sinpi.png}
-    \vspace{-4mm}
-    \caption{$T_{in}(t)= sin({\pi}x)$}
 \end{wrapfigure}
 
 As is shown in Figure 10, for the tent function the temperature decreases as it tends towards 0 and 1 from the centre of 0.5. As it steps through time, the heat tries to diffuse evenly within the object, this is shown by as time goes on, the heat decreases within the body and if we were to go further into time, the heat would altogether tend to zero across the body.
@@ -315,7 +311,56 @@ As is shown in Figure 10, for the tent function the temperature decreases as it 
 
 \vspace{3mm}In Figure 12, the absolute value of the sine wave was taken in which the reason it differs with the standard sine curve is that due to now across the centre, on either side the point they are no longer opposite in magnitude, therefore the point at the centre increases in magnitude as the heat disperses across the body, trying to uniformally distribute it.
 
-\vspace{3mm} In Figure 13, the input is half of a sine wave in which you can simply see as time goes on, throughout the body, the heat dissipates, tending towards 0.
+\pagebreak
 
+\begin{wrapfigure}[15]{r!}{0.5\textwidth}
+	\includegraphics[width=0.45\textwidth]{Ex4_Figs/sinpi.png}
+	\vspace{-3mm}
+	\caption{$T_{in}(x)= sin(\pi x)$}
+	\label{fig:test1}
+		\includegraphics[width=0.45\textwidth]{Ex4_Figs/poly.png}
+		\vspace{-3mm}
+	\caption{$T_{in}(x)= -40x^4 +72x^3 -38x^2 +6x$}
+	\label{fig:test2}
+\end{wrapfigure}
+
+In Figure 13, the input is half of a sine wave in which you can simply see as time goes on, throughout the body, the heat dissipates, tending towards 0.
+
+\vspace{4mm}In Figure 14, the input is a polynomial with the roots $x$ = 0, 0.3, 0.5 and 1 showing a very random distribution of the heat throughout the body, at the start of time, the heat from $0 < x < 0.5$ smooths off a lot quicker than  the second half of the graph due to the fact that there is a maximum at the point of $x \approx 0.83$ this takes a while for the heat to dissipate. As with all the rest, as time travels towards infinity, the heat will tend to 0, unifomally across the body.
+
+\vspace{40mm}
+\subsection{Bonus Exercises}
+\subsubsection{Boundary Conditions Not Met}
+
+\begin{wrapfigure}[21]{r!}{0.5\textwidth}
+	\vspace{-10mm}
+	\includegraphics[width=0.45\textwidth]{Ex4_Figs/1-xbcdiff.png}
+	\vspace{-3mm}
+	\caption{$T_{in}(x)= 1-x$}
+	\label{fig:bcnm}
+		\includegraphics[width=0.45\textwidth]{Ex4_Figs/Tentbc.png}
+		\vspace{-3mm}
+	\caption{$T_{in}(x)= tent(x)  y_0(t) = 0.75, y_1(t) = 0.25$}
+	\label{fig:bmsn2}
+\end{wrapfigure}
+
+In Figure 15, the input was the straigt line of $T_in(x) = 1-x$ where the left hand portion of the graph doesn't meet the left hand condition. With the boundary condition both being 0, it causes the temperature from just after x = 0 to fall away considerably quicker than any other portion of the graph due to the greater difference the boundary condition and the points to the side of it, as you can see on Figure 15.
+
+\subsubsection{Non Zero Boundary Conditions}
+
+In Figure 16, the input is a tent function, but rather than having boundary conditions in which were equal to 0, the boundary condition at x = 0, the temperature is equal to 0.75 and at x = 1, the value is equal to 0.25. As you can see the points to the left of the graph all pull up towards the value of 0.75 and on the other side, all the points are pulled towards the 0.25. As time goes to infinity, you would get the heat distributed as a straight line going from 0.75 to 0.25.
+
+\pagebreak
+
+\subsubsection{Time Varying Boundary Conditions}
+
+\begin{wrapfigure}[10]{r!}{0.5\textwidth}
+	\vspace{-6mm}
+	\includegraphics[width=0.45\textwidth]{Ex4_Figs/timevar.png}
+	\vspace{-3mm}
+	\caption{$T_{in}(x)= tent(x)  y_0(t) = y_1(t) = 20t$}
+\end{wrapfigure}
+
+jkhfioawr;kd4
 
 \end{document}
