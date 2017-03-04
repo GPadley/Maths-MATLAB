@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1488564724 "Report.tex" "/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.pdf" "Report" 1488564724
+["pdflatex"] 1488624970 "Report.tex" "/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.pdf" "Report" 1488624970
   "/etc/texmf/web2c/texmf.cnf" 1487783697 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk" 1487784058 28952 9adb890764e3214957a4412c9d7510e4 ""
   "/home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1487784058 31928 37fb9b75e745a5b2ea6802f1e729487f ""
@@ -8,7 +8,7 @@
   "/home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk" 1487784058 26208 aee22008d7cbc16681816d2eb36d481c ""
   "/home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk" 1487784059 42496 123ca6198cec87844571ebaf1e5f3248 ""
   "/home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk" 1487784421 21952 9a465c4409affd54140244cebb229363 ""
-  "/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux" 1488564724 4337 2953b806b3dd277d0126d22848fa5171 ""
+  "/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux" 1488624970 4367 5d6ef309077f2749facacc1aae547af2 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1136768653 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -109,13 +109,13 @@
   "Ex4_Figs/poly.png" 1488564496 55334 376e69feb77e1e19c1c768e8df176d03 ""
   "Ex4_Figs/sinpi.png" 1487842011 56321 943575a8449848b67ae609423706c5dd ""
   "Ex4_Figs/timevar.png" 1487871702 46784 aabb49938f32953a37c17c5fb30832cb ""
-  "Report.aux" 1488564724 4337 2953b806b3dd277d0126d22848fa5171 ""
-  "Report.tex" 1488564723 21325 81a2bc6fa0dbbbb88f8db93a57d34aad ""
-  "Report.toc" 1488564724 1557 39495d2d82589139c648d4d2855f26f2 ""
+  "Report.aux" 1488624970 4367 5d6ef309077f2749facacc1aae547af2 ""
+  "Report.tex" 1488624969 21644 12e30e223292cef82ed0083f3c587280 ""
+  "Report.toc" 1488624970 1557 39495d2d82589139c648d4d2855f26f2 ""
   (generated)
-  "Report.aux"
+  "Report.pdf"
   "Report.toc"
   "/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.log"
-  "Report.pdf"
   "Report.log"
   "/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.pdf"
+  "Report.aux"

@@ -31,6 +31,8 @@
   	\label{fig:RLC}
 \end{wrapfigure}
 
+%REMEMBER TO CHANGE FIGURE NUMBERS
+
 From Kirchoff's Voltage Law (KVL) the sum of all the voltages in a closed loop must sum to 0 V. Therefore from this we can derive the equation $V_{in}(t) = v_L(t)+v_R(t)+v_C(t)$. All of the voltages in the closed loop current which flows through them, all being equal to the inductor current. The voltage across a conductor is the inductance multiplied by the derivative of it's current, the voltage across the resistor is equal to it's resistance multiplied by the current travelling through it and the voltage across the capacitor is the charge held within the capacitor divided by the capacitance of the capacitor. Substituting these characteristics into the equation above gives us the equation:
 
 \[ L \frac{d}{dt}i_L(t) + R i_L(t) + \frac{1}{C}\int\limits_0^t i_L(t) \ dt = V_{in}(t)\]
@@ -340,7 +342,7 @@ In Figure 13, the input is half of a sine wave in which you can simply see as ti
 	\label{fig:bcnm}
 		\includegraphics[width=0.45\textwidth]{Ex4_Figs/Tentbc.png}
 		\vspace{-3mm}
-	\caption{$T_{in}(x)= tent(x)  y_0(t) = 0.75, y_1(t) = 0.25$}
+	\caption{$T_{in}(x)= tent(x) \hspace{2mm} y_0(t) = 0.75, y_1(t) = 0.25$}
 	\label{fig:bmsn2}
 \end{wrapfigure}
 
@@ -358,9 +360,9 @@ In Figure 16, the input is a tent function, but rather than having boundary cond
 	\vspace{-6mm}
 	\includegraphics[width=0.45\textwidth]{Ex4_Figs/timevar.png}
 	\vspace{-3mm}
-	\caption{$T_{in}(x)= tent(x)  y_0(t) = y_1(t) = 20t$}
+	\caption{$T_{in}(x)= tent(x) \hspace{2mm} y_0(t) = y_1(t) = 20t$}
 \end{wrapfigure}
 
-jkhfioawr;kd4
+In Figure 17, the input is a tent function, initially with zero boundary conditions, but as time moves forward, the temperature at the end points increases with the equation of $y_0(t) = y_1(t) = 20t$. So the heat in the body will end up heating up from the edges inwards.
 
 \end{document}
