@@ -12,6 +12,11 @@
 \usepackage{layout}
 \usepackage{alltt}
 \usepackage[justification=centering]{caption}
+\usepackage[export]{adjustbox}
+\usepackage{ulem}
+\usepackage{subcaption}
+\usepackage[section]{placeins}
+
 \setlength{\voffset}{-0.4in}
 \textheight = 735pt
 \begin{document}
@@ -19,6 +24,467 @@
 \title{\textbf{EE2-08C Numerical Analysis} \\ Group 9\vspace{-17mm}}
 \maketitle
 \tableofcontents
+\pagebreak
+
+\section{Exercise 1 - RL Circuit}\vspace{-1mm}
+
+\subsection{Background}
+\begin{wrapfigure}{r}{0.5\textwidth}
+\vspace{-10mm}
+\includegraphics[width=0.49\textwidth]{Ex1_Figs/RL_circuit.png}
+\vspace{-6mm}
+\caption{RL Circuit}
+\label{fig:RL1}
+\end{wrapfigure}
+This simple RL circuit (\ref{fig:RL1}) forms a high pass filter circuit which takes an input signal Vin and only allows the high frequency components to pass. Despite the inductor being less convenient than a capacitor, this RL circuit can approach the model of a DC motor. In this specific case, we want to model a DC motor with inertia 250 $\mu$sNm/s$^2$ and $T_{max} = 50mNm/A$. To do so, according to KCL, we know that
+
+\begin{equation}
+Vin(t) = v_L(t) + v_R(t)
+\end{equation}
+
+
+and therefore:
+\begin{equation}
+V_{in}(t) = L\frac{d}{dt}i_L(t) + R i_L(t)
+\end{equation}
+
+$i_L(t)$ is the state that we will solve following the three different second-order Runge Kutta methods.
+
+All methods follow the same pattern:
+\begin{equation}
+x_{i+1} = x_i + h
+\end{equation}
+
+$h$ being the step size and
+\begin{equation}
+   y_{i+1} = y_i + h (a k_1 + b k_2)
+\end{equation}
+
+where
+
+\[k_1 = f(x_i, y_i)\]
+\[k_2 = f(x_i + p h, y_i + q k_1 h)\]
+
+and the values of $a, b, p$ and $q$ depend on which method we are using:
+
+\begin{center}
+ \begin{tabular}{||c | c c c||}
+ \hline
+ Parameter & Heuns & Midpoint & Ralston \\ [0.5ex]
+ \hline\hline
+ a & 1/2 & 0 & 1/4 \\
+ \hline
+ b & 1/2 & 1 & 3/4 \\
+ \hline
+ p & 1 & 1/2 & 2/3 \\
+ \hline
+ q & 1 & 1/2 & 2/3 \\ [1ex]
+ \hline
+\end{tabular}
+\end{center}
+
+Each method will approximate the exact solution according to these parameters. Therefore, the smaller the step size $h$, the more exact the method will approximate the solution.
+
+ After doing so, the output value will be obtained as follows:
+\begin{equation}
+V_{out} = V_{in}(t) - R i_L(t)
+\end{equation}
+
+\newpage
+
+\subsection{Second-Order Runge Kutta Scripts}
+
+\vspace{-2mm}The code for Heuns.m to solve $i_L(t)$ will be as follows:
+
+\begin{verbatim}
+function [t,y] = heun(func,t0,y0,tf,h) % y = i_L(t), func = equation (2),
+% t0 = initial time, tf = final time, h = step size
+N = round((tf-t0)/h);   % N = nr. of steps
+arrt = zeros(1,N);      % arrt = array of time
+arry = zeros(1,N);      % arry = array of y
+arrt(1) = t0;           % initial conditions
+arry(1) = y0;
+for i = 1 : N-1         % evaluate arry and arrt for each step
+    k1 = feval(func, arrt(i), arry(i));
+    k2 = feval(func, arrt(i) + h, arry(i) + k1*h);
+    arry(i+1) = arry(i) + h*0.5*(k1 + k2);
+    arrt(i+1) = arrt(i) + h;
+end
+t= arrt;                % return values
+y = arry;
+end
+\end{verbatim}
+
+\vspace{-2mm}Similarly, the code for Midpoint.m will be:
+\vspace{-1mm}
+\begin{verbatim}
+function [t,y] = midpoint(func, t0, y0, tf, h)     % y = i_L(t), func = equation (2),
+% t0 = initial time, tf = final time, h = step size
+N = round((tf - t0)/h); % N = nr. of steps
+arrt = zeros(1,N);      % arrt = array of time
+arry = zeros(1,N);      % arry = array of y
+arrt(1) = t0;           % initial conditions
+arry(1) = y0;
+for i = 1:N-1           % evaluate arry and arrt for each step
+    k1 = feval(func,arrt(i),arry(i));
+    k2 = feval(func, arrt(i) + 0.5*h, arry(i) + 0.5*h*k1);
+    arry(i+1) = arry(i) + h*((1/4)*k1 + (3/4)*k2);
+    arrt(i+1) = arrt(i) + h;
+end
+t = arrt; y = arry;     % return values
+end
+\end{verbatim}
+
+Lastly, Ralston.m will be as similar:
+
+\begin{verbatim}
+function [t, y] = ralston(func,t0,y0,tf,h)  % y = i_L(t), func = equation (2),
+% t0 = initial time, tf = final time, h = step size
+N = round((tf-t0)/h);   % N = nr. of steps
+arrt = zeros(1,N);      % arrt = array of time
+arry = zeros(1,N);      % arry = array of y
+arrt(1) = t0;           % initial conditions
+arry(1) = y0;
+for i = 1 : N-1         % evaluate arry and arrt for each step
+    k1 = feval(func, arrt(i), arry(i));
+    k2 = feval(func, arrt(i)+(2/3)*h, arry(i)+(2/3)*h*k1);
+    arry(i+1) = arry(i) + (h/4)*(k1 + 3*k2);
+    arrt(i+1) = arrt(i) + h;
+end
+y = arry; t = arrt;     % return values
+end
+\end{verbatim}
+
+As mentioned above, we can appreciate that the three second-order Runge Kutta methods are almost identical with the parameters inside the $for$ $loop$ the only difference between them.
+
+\newpage
+\subsection{Script to solve the ODE}
+Given that the values of the components of the RL circuit are:
+
+\[R = 0.5\Omega\ \hspace{3mm} L = 1.5mH\]
+
+We will find the value of $V_{out}$ according to a script which always follows the same pattern, depending on the values of $V_{in}$ and adjusting the values of $h$ and $t_f$. A standard script would be as follows:
+
+\begin{verbatim}
+y0 = 0;
+t0 = 0; tf = ***;   % to decide
+h = ***;            % to decide
+
+Vin =@(t) ***;      % different inputs
+
+R = 0.5; L = 1.5*10^(-3);           % R, L values for this project
+func =@(t, y) (Vin(t) - R*y)/L;     % equation 2
+[t, y] = ****(func,t0,y0,tf,h);     % heuns, midpoint or ralston
+vout = Vin(t)-R*y;                  % equation 5
+figure;
+plot(t, vout);      % plot V_out against time
+title '****'
+xlabel 't(s)'
+ylabel 'Vout(t)'
+
+\end{verbatim}
+\newpage
+\subsection{Exercise 1 - Graphs}
+\subsubsection{Step signal with amplitude}
+\begin{wrapfigure}{r}{0.5\textwidth}
+        \vspace{-15mm}
+        \includegraphics[width=0.49\textwidth]{Ex1_Figs/heuns_step.png}
+        \vspace{-6mm}
+        \caption{Heuns for Vin = 3.5V}
+        \label{fig:RL2}
+    \end{wrapfigure}
+
+$\tilde{V}_{in} = 3.5V$ \\
+    $t0 = 0$, $tf = 0.02$; \\
+    $h = 0.001$; \\
+    $Vin = @(t) 3.5$; \\
+    %$[t,y] = heuns(func, t0, y0, tf, h)$ \\
+
+In the step signal case, all methods will lead to equal approximation of the solutions. Figure \ref{fig:RL2} is applying Heuns method, but if we apply Midpoint (Figure \ref{fig:RL3}) or Ralston (Figure \ref{fig:RL4}) with the same step size and time conditions, we get similar plots.
+
+
+\begin{figure}[b]
+	\begin{subfigure}{.5\textwidth}
+  		\includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/ralston_step.png}
+  		\caption[right]{Ralston for Vin = 3.5V}
+  		\label{fig:RL4}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+  		\includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/midpoint_step.png}
+  		\caption{Midpoint for Vin = 3.5V}
+  		\label{fig:RL3}
+	\end{subfigure}
+	\caption{Ralston and Midpoint for Vin = 3.5V}
+	\label{fig:test}
+\end{figure}
+
+\pagebreak
+
+The MATLAB code below is used to plot teh result from all three methods on one graph (Figure \ref{fig:RL5}).
+
+\begin{verbatim}
+    [t,y] = heun(func,t0,y0,tf,h);
+    Vout = Vin(t) - R*y;
+    figure;
+    plot(t, Vout, 'b'); % plot heuns method in blue
+    hold on;
+    [t,y] = ralston(func,t0,y0,tf,h);
+    Vout = Vin(t) - R*y;
+    plot(t, Vout, 'r')  % plot midpoint method in red
+    hold on;
+    [t,y] = ralston(func,t0,y0,tf,h);
+    Vout = Vin(t) - R*y;
+    plot(t, Vout, 'g')
+    title 'All for step signal Vin = 3.5V'
+    xlabel 't(s)'
+    ylabel 'Vout(V)'
+    legend ('Heuns', 'Midpoint', 'Ralston')
+    \end{verbatim}
+
+  \begin{figure}[h]
+    \includegraphics[width=0.49\textwidth,center]{Ex1_Figs/all_step.png}
+    \caption{All for Vin = 3.5V}
+    \label{fig:RL5}
+    \end{figure}
+ The code above was used to plot all three methods on the same graph. The plot (Figure \ref{fig:RL5}) proves that the three methods are equal for the same step size and time conditions for the given input (Vin = 3.5V).
+
+
+\newpage
+\subsubsection{Impulsive signal and decay}
+$Vin = Vin*exp(-t^2/\tau)$
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\vspace{-15mm}
+\includegraphics[width=0.49\textwidth,center]{Ex1_Figs/heun_t2.png}
+\vspace{-6mm}
+\caption{Heuns for $Vin = Vin*exp(-t^2/\tau)$}
+\label{fig:RL6}
+\end{wrapfigure}
+
+In this section, we will examine the 2nd order Runge Kutta Methods using an impulsive signal input given in the equation below:
+
+ \begin{equation}
+V_{in} = \tilde{V}_{in}  exp{-t^2/\tau}
+\end{equation}
+
+ \begin{verbatim}
+    t0 = 0, tf = 0.05;
+    h = 0.0005;
+    vin = 3.5;
+    z = 150*10^(-6);
+    t = t0: T : tf;
+    Vin = @(t) vin*exp(-(t.^2)/z)
+    \end{verbatim}
+
+\begin{figure}[h]
+\begin{subfigure}{.5\textwidth}
+  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/mid_t2.png}
+  \caption[right]{Midpoint for $Vin = Vin*exp(-t^2/\tau)$}
+  \label{fig:RL7}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/ral_t2.png}
+  \caption{Ralston for $Vin = Vin*exp(-t^2/\tau)$}
+  \label{fig:RL8}
+\end{subfigure}
+\caption{Ralston and Midpoint for $Vin = Vin*exp(-t^2/\tau)$}
+\label{fig:RLx}
+\end{figure}
+
+
+%Put comments on figures 5 and 6 here
+
+\newpage
+$Vin = Vin*exp(-t/\tau)$
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\vspace{-15mm}
+\includegraphics[width=0.49\textwidth,center]{Ex1_Figs/heuns_t.png}
+\vspace{-6mm}
+\caption{Heuns for $Vin = Vin*exp(-t/\tau)$}
+\label{fig:RL9}
+\end{wrapfigure}
+
+In order to examine the behaviour of the three 2nd order Runge Kutta methods, we will demonstrate their outputs with another impulsive signal given below:
+
+\begin{equation}
+V_{in} = \tilde{V}_{in}  exp{-t/\tau}
+\end{equation}
+
+\begin{verbatim}
+t0 = 0; tf = 0.1;
+h = 0.001;
+vin = 3.5;
+z = 150*10^(-6);
+t = t0: T : tf;
+Vin = @(t) vin*exp(-(t)/z);
+\end{verbatim}
+
+\begin{figure}[h]
+\begin{subfigure}{.5\textwidth}
+  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/mid_t.png}
+  \caption[right]{Midpoint for $Vin = Vin*exp(-t/\tau)$}
+  \label{fig:RL10}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/rals_t.png}
+  \caption{Ralston for $Vin = Vin*exp(-t/\tau)$}
+  \label{fig:RL11}
+\end{subfigure}
+\caption{Ralston and Midpoint for $Vin = Vin*exp(-t/\tau)$}
+\label{fig:RLy}
+\end{figure}
+
+
+For both impulsive signals, the difference in the outputs obtained from the three different methods between  is minimal. This can be seen from the graphs in Figure:\ref{fig:RL12} and Figure: \ref{fig:RL13} which plot all three curves obtained for the two impulsive signal inputs $V_{in} = \tilde{V}_{in}  exp{-t^2/\tau}$ and $Vin = Vin*exp(-t/\tau)$ respectively.
+
+\begin{figure}[h]
+\begin{subfigure}{.5\textwidth}
+  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/all_t2.png}
+  \caption[right]{All for $Vin = Vin*exp(-t^2/\tau)$}
+  \label{fig:RL12}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/all_t.png}
+  \caption{All for $Vin = Vin*exp(-t/\tau)$}
+  \label{fig:RL13}
+\end{subfigure}
+\caption{All for $Vin = Vin*exp(-t/\tau)$ and $Vin = Vin*exp(-t^2/\tau)$}
+\label{fig:test3}
+\end{figure}
+
+\FloatBarrier
+\newpage
+\subsubsection{Sine wave amplitude $\tilde{V}_{in} = 4V$}
+
+For the waves cases, three methods will be plot in the same graph for comparison purposes and avoid overloading of graphs.
+
+\begin{verbatim}
+vin = 4;
+T = ***10^(-6);
+t = t0: T : tf;
+f = 1/T;
+Vin =@(t) vin*sin(2*pi*f*t);
+\end{verbatim}
+
+\begin{figure}[h]
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=.8\linewidth]{Ex1_Figs/allsine150g.png}
+\caption{$T = 150\mu s$,  $h = 0.000001$  and $t_f = 0.003$}
+\label{fig:sfig1}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=.8\linewidth]{Ex1_Figs/allsine15g.png}
+\caption{$T = 15\mu s$, h = 0.0000001 and tf = 0.00003}
+\label{fig:sfig2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[width=.8\linewidth]{Ex1_Figs/allsine400.png}
+\caption{$T = 400\mu s$,  $h = 0.00001$ and $t_f = 0.001$}
+\label{fig:sfig3}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\centering
+\includegraphics[width=.8\linewidth]{Ex1_Figs/allsine1100.png}
+\caption{$T = 1100\mu s$,  h = 0.0000001 and tf = 0.00003}
+\label{fig:sfig4}
+\end{subfigure}
+\caption{Plots of sine waves for different periods}
+\label{fig:test4}
+\end{figure}
+
+%Put Comments on Figure 10 here
+
+
+
+\FloatBarrier
+\newpage
+\subsubsection {Square wave with $\tilde{V}_{in} = 4V$}
+   \begin{verbatim}
+        vin = 4;
+        T = ***10^(-6);
+        t = t0: T : tf;
+        f = 1/T;
+        Vin =@(t) vin*square(2*pi*f*t);
+    \end{verbatim}
+
+    \begin{figure}[h]
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.8\linewidth]{Ex1_Figs/square150.png}
+          \caption{$T = 150\mu s$}
+          \label{fig:sfig5}
+        \end{subfigure}%
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.8\linewidth]{Ex1_Figs/square15.png}
+          \caption{$T = 15\mu s$}
+          \label{fig:sfig6}
+        \end{subfigure}
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.8\linewidth]{Ex1_Figs/square400.png}
+          \caption{$T = 400\mu s$}
+          \label{fig:sfig7}
+        \end{subfigure}
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.8\linewidth]{Ex1_Figs/square1100.png}
+          \caption{$T = 1100\mu s$}
+          \label{fig:sfig8}
+        \end{subfigure}
+        \caption{Plots of square waves for different periods}
+        \label{fig:test5}
+    \end{figure}
+
+%Put Comments on figure 11 here
+
+
+
+\newpage
+\FloatBarrier
+\subsubsection{Sawtooth wave with $\tilde{V}_{in} = 4V$}
+
+    \begin{verbatim}
+        vin = 4;
+        T = ***10^(-6);
+        t = t0: T : tf;
+        f = 1/T;
+        Vin =@(t) vin*sawtooth(2*pi*f*t);
+    \end{verbatim}
+
+    \begin{figure}[h]
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.8\linewidth]{Ex1_Figs/sawtooth150.png}
+          \caption{$T = 150\mu s$}
+          \label{fig:sfig9}
+        \end{subfigure}%
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.8\linewidth]{Ex1_Figs/sawtooth15.png}
+          \caption{$T = 15\mu s$}
+          \label{fig:sfig10}
+        \end{subfigure}
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.8\linewidth]{Ex1_Figs/sawtooth400.png}
+          \caption{$T = 400\mu s$}
+          \label{fig:sfig11}
+        \end{subfigure}
+        \begin{subfigure}{.5\textwidth}
+          \centering
+          \includegraphics[width=.8\linewidth]{Ex1_Figs/sawtooth1100.png}
+          \caption{$T = 1100\mu s$}
+          \label{fig:sfig12}
+        \end{subfigure}
+        \caption{Plots of sawtooth waves for different periods}
+        \label{fig:test6}
+    \end{figure}
+
 \pagebreak
 \section{Exercise 3 - RLC Circuit}\vspace{-1mm}
 \subsection{Background}
