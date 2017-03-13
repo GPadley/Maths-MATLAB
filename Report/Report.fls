@@ -230,6 +230,29 @@ INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth400.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth1100.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth1100.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth1100.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/midpoint_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/midpoint_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/midpoint_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/ralston_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/ralston_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/ralston_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/ralston_error.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/ralston_error.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/ralston_error.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/errorloglogfinal1.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/errorloglogfinal1.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/errorloglogfinal1.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/RLC.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/RLC.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/RLC.png
@@ -293,6 +316,7 @@ INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
 INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk
 INPUT /home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
