@@ -36,7 +36,8 @@
 \caption{RL Circuit}
 \label{fig:RL1}
 \end{wrapfigure}
-This simple RL circuit (\ref{fig:RL1}) forms a high pass filter circuit which takes an input signal Vin and only allows the high frequency components to pass. Despite the inductor being less convenient than a capacitor, this RL circuit can approach the model of a DC motor. In this specific case, we want to model a DC motor with inertia 250 $\mu$sNm/s$^2$ and $T_{max} = 50mNm/A$. To do so, according to KCL, we know that
+
+This simple RL circuit (\ref{fig:RL1}) forms a high pass filter circuit which takes an input signal Vin and only allows the high frequency components to pass. Despite the inductor being less convenient than a capacitor, this RL circuit can approach the model of a DC motor. In this specific case, we want to model a DC motor with inertia 250 $\mu$sNm/s$^2$ and $T_{max} = 50 mNm/A$. To do so, according to KCL, we know that
 
 \begin{equation}
 Vin(t) = v_L(t) + v_R(t)
@@ -60,17 +61,20 @@ $h$ being the step size and
    y_{i+1} = y_i + h (a k_1 + b k_2)
 \end{equation}
 
-where
+where:
 
-\[k_1 = f(x_i, y_i)\]
-\[k_2 = f(x_i + p h, y_i + q k_1 h)\]
-
+\begin{equation}
+k_1 = f(x_i, y_i)
+\end{equation}
+\begin{equation}
+k_2 = f(x_i + p h, y_i + q k_1 h)
+\end{equation}
 and the values of $a, b, p$ and $q$ depend on which method we are using:
 
 \begin{center}
  \begin{tabular}{||c | c c c||}
  \hline
- Parameter & Heuns & Midpoint & Ralston \\ [0.5ex]
+ Parameter & Heun’s & Midpoint & Ralston \\ [0.5ex]
  \hline\hline
  a & 1/2 & 0 & 1/4 \\
  \hline
@@ -118,7 +122,7 @@ end
 \vspace{-2mm}Similarly, the code for Midpoint.m will be:
 \vspace{-1mm}
 \begin{verbatim}
-function [t,y] = midpoint(func, t0, y0, tf, h)     % y = i_L(t), func = equation (2),
+function [t,y] = midpoint(func, t0, y0, tf, h) % y = i_L(t), func = equation (2),
 % t0 = initial time, tf = final time, h = step size
 N = round((tf - t0)/h); % N = nr. of steps
 arrt = zeros(1,N);      % arrt = array of time
@@ -138,7 +142,7 @@ end
 Lastly, Ralston.m will be as similar:
 
 \begin{verbatim}
-function [t, y] = ralston(func,t0,y0,tf,h)  % y = i_L(t), func = equation (2),
+function [t, y] = ralston(func,t0,y0,tf,h) % y = i_L(t), func = equation (2),
 % t0 = initial time, tf = final time, h = step size
 N = round((tf-t0)/h);   % N = nr. of steps
 arrt = zeros(1,N);      % arrt = array of time
@@ -184,82 +188,34 @@ ylabel 'Vout(t)'
 
 \end{verbatim}
 \newpage
+
 \subsection{Exercise 1 - Graphs}
 \subsubsection{Step signal with amplitude}
-\begin{wrapfigure}{r}{0.5\textwidth}
-        \vspace{-15mm}
-        \includegraphics[width=0.49\textwidth]{Ex1_Figs/heuns_step.png}
-        \vspace{-6mm}
-        \caption{Heuns for Vin = 3.5V}
-        \label{fig:RL2}
-    \end{wrapfigure}
 
-$\tilde{V}_{in} = 3.5V$ \\
-    $t0 = 0$, $tf = 0.02$; \\
-    $h = 0.001$; \\
-    $Vin = @(t) 3.5$; \\
-    %$[t,y] = heuns(func, t0, y0, tf, h)$ \\
+For the graphs in this section, axis labels were forgotten to be added, the x axis is time in seconds and the y axis is voltage in volts.
 
-In the step signal case, all methods will lead to equal approximation of the solutions. Figure \ref{fig:RL2} is applying Heuns method, but if we apply Midpoint (Figure \ref{fig:RL3}) or Ralston (Figure \ref{fig:RL4}) with the same step size and time conditions, we get similar plots.
-
-
-\begin{figure}[b]
-	\begin{subfigure}{.5\textwidth}
-  		\includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/ralston_step.png}
-  		\caption[right]{Ralston for Vin = 3.5V}
-  		\label{fig:RL4}
-	\end{subfigure}
-	\begin{subfigure}{.5\textwidth}
-  		\includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/midpoint_step.png}
-  		\caption{Midpoint for Vin = 3.5V}
-  		\label{fig:RL3}
-	\end{subfigure}
-	\caption{Ralston and Midpoint for Vin = 3.5V}
-	\label{fig:test}
-\end{figure}
-
-\pagebreak
-
-The MATLAB code below is used to plot teh result from all three methods on one graph (Figure \ref{fig:RL5}).
+	$Vin = 3.5V$
 
 \begin{verbatim}
-    [t,y] = heun(func,t0,y0,tf,h);
-    Vout = Vin(t) - R*y;
-    figure;
-    plot(t, Vout, 'b'); % plot heuns method in blue
-    hold on;
-    [t,y] = ralston(func,t0,y0,tf,h);
-    Vout = Vin(t) - R*y;
-    plot(t, Vout, 'r')  % plot midpoint method in red
-    hold on;
-    [t,y] = ralston(func,t0,y0,tf,h);
-    Vout = Vin(t) - R*y;
-    plot(t, Vout, 'g')
-    title 'All for step signal Vin = 3.5V'
-    xlabel 't(s)'
-    ylabel 'Vout(V)'
-    legend ('Heuns', 'Midpoint', 'Ralston')
-    \end{verbatim}
+	t0 = 0, tf = 0.02;
+	h = 0.001;
+	Vin = @(t) 3.5;
+\end{verbatim}
+    %$[t,y] = heuns(func, t0, y0, tf, h)$ \\
 
-  \begin{figure}[h]
-    \includegraphics[width=0.49\textwidth,center]{Ex1_Figs/all_step.png}
-    \caption{All for Vin = 3.5V}
-    \label{fig:RL5}
-    \end{figure}
- The code above was used to plot all three methods on the same graph. The plot (Figure \ref{fig:RL5}) proves that the three methods are equal for the same step size and time conditions for the given input (Vin = 3.5V).
+In the step signal case, all methods will lead to equal approximation of the solutions. Figure \ref{fig:RL2}c is applying Heun's method, but if we apply Midpoint (Figure \ref{fig:RL2}b) or Ralston (Figure \ref{fig:RL2}a) with the same step size (Figure \ref{fig:RL2}d) and time conditions, we get similar plots.
 
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{Ex1_Figs/substep.jpg}
+	\vspace{-6mm}
+	\caption{Vin = Step Response}
+	\label{fig:RL2}
+\end{figure}
 
 \newpage
 \subsubsection{Impulsive signal and decay}
 $Vin = Vin*exp(-t^2/\tau)$
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-\vspace{-15mm}
-\includegraphics[width=0.49\textwidth,center]{Ex1_Figs/heun_t2.png}
-\vspace{-6mm}
-\caption{Heuns for $Vin = Vin*exp(-t^2/\tau)$}
-\label{fig:RL6}
-\end{wrapfigure}
 
 In this section, we will examine the 2nd order Runge Kutta Methods using an impulsive signal input given in the equation below:
 
@@ -276,34 +232,19 @@ V_{in} = \tilde{V}_{in}  exp{-t^2/\tau}
     Vin = @(t) vin*exp(-(t.^2)/z)
     \end{verbatim}
 
-\begin{figure}[h]
-\begin{subfigure}{.5\textwidth}
-  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/mid_t2.png}
-  \caption[right]{Midpoint for $Vin = Vin*exp(-t^2/\tau)$}
-  \label{fig:RL7}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/ral_t2.png}
-  \caption{Ralston for $Vin = Vin*exp(-t^2/\tau)$}
-  \label{fig:RL8}
-\end{subfigure}
-\caption{Ralston and Midpoint for $Vin = Vin*exp(-t^2/\tau)$}
-\label{fig:RLx}
-\end{figure}
+	\begin{figure}[h]
+		\includegraphics[width=\textwidth]{Ex1_Figs/subt2.jpg}
+		\vspace{-6mm}
+		\caption{Vin = $3.5exp(\frac{-t^2}{\tau})$}
+		\label{fig:RL3}
+	\end{figure}
 
 
 %Put comments on figures 5 and 6 here
 
 \newpage
-$Vin = Vin*exp(-t/\tau)$
 
-\begin{wrapfigure}[0]{r}{0.5\textwidth}
-\vspace{-30mm}
-\includegraphics[width=0.49\textwidth,center]{Ex1_Figs/heuns_t.png}
-\vspace{-6mm}
-\caption{Heuns for $Vin = Vin*exp(-t/\tau)$}
-\label{fig:RL9}
-\end{wrapfigure}
+\[Vin = Vin*exp(-t/\tau)\]
 
 In order to examine the behaviour of the three 2nd order Runge Kutta methods, we will demonstrate their outputs with another impulsive signal given below:
 
@@ -320,37 +261,14 @@ Vin = @(t) vin*exp(-(t)/z);
 \end{verbatim}
 
 \begin{figure}[h]
-\begin{subfigure}{.5\textwidth}
-  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/mid_t.png}
-  \caption[right]{Midpoint for $Vin = Vin*exp(-t/\tau)$}
-  \label{fig:RL10}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/rals_t.png}
-  \caption{Ralston for $Vin = Vin*exp(-t/\tau)$}
-  \label{fig:RL11}
-\end{subfigure}
-\caption{Ralston and Midpoint for $Vin = Vin*exp(-t/\tau)$}
-\label{fig:RLy}
+	\includegraphics[width=\textwidth]{Ex1_Figs/subt.jpg}
+	\vspace{-6mm}
+	\caption{Vin = $3.5exp(\frac{-t^2}{\tau})$}
+	\label{fig:RL4}
 \end{figure}
 
 
-For both impulsive signals, the difference in the outputs obtained from the three different methods between  is minimal. This can be seen from the graphs in Figure:\ref{fig:RL12} and Figure: \ref{fig:RL13} which plot all three curves obtained for the two impulsive signal inputs $V_{in} = \tilde{V}_{in}  exp{-t^2/\tau}$ and $Vin = Vin*exp(-t/\tau)$ respectively.
-
-\begin{figure}[h]
-\begin{subfigure}{.5\textwidth}
-  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/all_t2.png}
-  \caption[right]{All for $Vin = Vin*exp(-t^2/\tau)$}
-  \label{fig:RL12}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-  \includegraphics[width=.9\linewidth,height = 5cm]{Ex1_Figs/all_t.png}
-  \caption{All for $Vin = Vin*exp(-t/\tau)$}
-  \label{fig:RL13}
-\end{subfigure}
-\caption{All for $Vin = Vin*exp(-t/\tau)$ and $Vin = Vin*exp(-t^2/\tau)$}
-\label{fig:test3}
-\end{figure}
+For both impulsive signals, the difference in the outputs obtained from the three different methods between  is minimal. This can be seen from the graphs in Figure \ref{fig:RL12} and Figure \ref{fig:RL13} which plot all three curves obtained for the two impulsive signal inputs $V_{in} = \tilde{V}_{in}  exp{-t^2/\tau}$ and $Vin = Vin*exp(-t/\tau)$ respectively.
 
 \newpage
 \subsubsection{Sine wave amplitude $\tilde{V}_{in} = 4V$}
@@ -366,34 +284,32 @@ Vin =@(t) vin*sin(2*pi*f*t);
 \end{verbatim}
 
 \begin{figure}[h]
-\begin{subfigure}{0.5\textwidth}
-\centering
-\includegraphics[width=.8\linewidth]{Ex1_Figs/allsine150g.png}
-\caption{$T = 150\mu s$,  $h = 0.000001$  and $t_f = 0.003$}
-\label{fig:sfig1}
-\end{subfigure}
-\begin{subfigure}{0.5\textwidth}
-\centering
-\includegraphics[width=.8\linewidth]{Ex1_Figs/allsine15g.png}
-\caption{$T = 15\mu s$, h = 0.0000001 and tf = 0.00003}
-\label{fig:sfig2}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-\centering
-\includegraphics[width=.8\linewidth]{Ex1_Figs/allsine400.png}
-\caption{$T = 400\mu s$,  $h = 0.00001$ and $t_f = 0.001$}
-\label{fig:sfig3}
-\end{subfigure}
-\begin{subfigure}{0.5\textwidth}
-\centering
-\includegraphics[width=.8\linewidth]{Ex1_Figs/allsine1100.png}
-\caption{$T = 1100\mu s$,  h = 0.0000001 and tf = 0.00003}
-\label{fig:sfig4}
-\end{subfigure}
-\caption{Plots of sine waves for different periods}
-\label{fig:test4}
+	\vspace{-5mm}
+	\centering
+	\includegraphics[width=.75\textwidth]{Ex1_Figs/sin15.jpg}
+	\vspace{-6mm}
+	\caption{$T = 15 \mu s$}
+	\label{fig:RL4}
+	\includegraphics[width=.75\textwidth]{Ex1_Figs/sin150.jpg}
+	\vspace{-6mm}
+	\caption{$T = 150 \mu s$}
+	\label{fig:RL4}
 \end{figure}
 
+\pagebreak
+
+\begin{figure}[h]
+	\vspace{-5mm}
+	\centering
+	\includegraphics[width=\textwidth]{Ex1_Figs/sin400.jpg}
+	\vspace{-15mm}
+	\caption{$T = 400 \mu s$}
+	\label{fig:RL4}
+	\includegraphics[width=\textwidth]{Ex1_Figs/sin1100.jpg}
+	\vspace{-15mm}
+	\caption{$T = 1100 \mu s$}
+	\label{fig:RL4}
+\end{figure}
 %Put Comments on Figure 10 here
 
 
@@ -401,84 +317,81 @@ Vin =@(t) vin*sin(2*pi*f*t);
 \FloatBarrier
 \newpage
 \subsubsection {Square wave with $\tilde{V}_{in} = 4V$}
-   \begin{verbatim}
-        vin = 4;
-        T = ***10^(-6);
-        t = t0: T : tf;
-        f = 1/T;
-        Vin =@(t) vin*square(2*pi*f*t);
-    \end{verbatim}
+\begin{verbatim}
+    vin = 4;
+    T = ***10^(-6);
+    t = t0: T : tf;
+    f = 1/T;
+    Vin =@(t) vin*square(2*pi*f*t);
+\end{verbatim}
 
-    \begin{figure}[h]
-        \begin{subfigure}{.5\textwidth}
-          \centering
-          \includegraphics[width=.8\linewidth]{Ex1_Figs/square150.png}
-          \caption{$T = 150\mu s$}
-          \label{fig:sfig5}
-        \end{subfigure}%
-        \begin{subfigure}{.5\textwidth}
-          \centering
-          \includegraphics[width=.8\linewidth]{Ex1_Figs/square15.png}
-          \caption{$T = 15\mu s$}
-          \label{fig:sfig6}
-        \end{subfigure}
-        \begin{subfigure}{.5\textwidth}
-          \centering
-          \includegraphics[width=.8\linewidth]{Ex1_Figs/square400.png}
-          \caption{$T = 400\mu s$}
-          \label{fig:sfig7}
-        \end{subfigure}
-        \begin{subfigure}{.5\textwidth}
-          \centering
-          \includegraphics[width=.8\linewidth]{Ex1_Figs/square1100.png}
-          \caption{$T = 1100\mu s$}
-          \label{fig:sfig8}
-        \end{subfigure}
-        \caption{Plots of square waves for different periods}
-        \label{fig:test5}
-    \end{figure}
+\begin{figure}[h]
+	\vspace{-5mm}
+	\centering
+	\includegraphics[width=.75\textwidth]{Ex1_Figs/squ15.jpg}
+	\vspace{-6mm}
+	\caption{$T = 15 \mu s$}
+	\label{fig:RL4}
+	\includegraphics[width=.75\textwidth]{Ex1_Figs/squ150.jpg}
+	\vspace{-3mm}
+	\caption{$T = 150 \mu s$}
+	\label{fig:RL4}
+\end{figure}
+
+\pagebreak
+
+	\begin{figure}[H]
+		\vspace{-5mm}
+		\centering
+		\includegraphics[width=\textwidth]{Ex1_Figs/squ400.jpg}
+		\vspace{-15mm}
+		\caption{$T = 400 \mu s$}
+		\label{fig:RL4}
+		\includegraphics[width=\textwidth]{Ex1_Figs/squ1100.jpg}
+		\vspace{-15mm}
+		\caption{$T = 1100 \mu s$}
+		\label{fig:RL4}
+	\end{figure}
+
+\pagebreak
 
 
-\newpage
-
+\FloatBarrier
 \subsubsection{Sawtooth wave with $\tilde{V}_{in} = 4V$}
 
-    \begin{verbatim}
-        vin = 4;
-        T = ***10^(-6);
-        t = t0: T : tf;
-        f = 1/T;
-        Vin =@(t) vin*sawtooth(2*pi*f*t);
-    \end{verbatim}
+\begin{verbatim}
+    vin = 4;
+    T = ***10^(-6);
+    t = t0: T : tf;
+    f = 1/T;
+    Vin =@(t) vin*sawtooth(2*pi*f*t);
+\end{verbatim}
+\begin{figure}[h]
+	\vspace{-5mm}
+	\centering
+	\includegraphics[width=.75\textwidth]{Ex1_Figs/saw15.jpg}
+	\vspace{-6mm}
+	\caption{$T = 15 \mu s$}
+	\label{fig:RL4}
+	\includegraphics[width=.75\textwidth]{Ex1_Figs/saw150.jpg}
+	\vspace{-3mm}
+	\caption{$T = 150 \mu s$}
+	\label{fig:RL4}
+\end{figure}
 
-    \begin{figure}[h]
-        \begin{subfigure}{.5\textwidth}
-          \centering
-          \includegraphics[width=.8\linewidth]{Ex1_Figs/sawtooth150.png}
-          \caption{$T = 150\mu s$}
-          \label{fig:sfig9}
-        \end{subfigure}%
-        \begin{subfigure}{.5\textwidth}
-          \centering
-          \includegraphics[width=.8\linewidth]{Ex1_Figs/sawtooth15.png}
-          \caption{$T = 15\mu s$}
-          \label{fig:sfig10}
-        \end{subfigure}
-        \begin{subfigure}{.5\textwidth}
-          \centering
-          \includegraphics[width=.8\linewidth]{Ex1_Figs/sawtooth400.png}
-          \caption{$T = 400\mu s$}
-          \label{fig:sfig11}
-        \end{subfigure}
-        \begin{subfigure}{.5\textwidth}
-          \centering
-          \includegraphics[width=.8\linewidth]{Ex1_Figs/sawtooth1100.png}
-          \caption{$T = 1100\mu s$}
-          \label{fig:sfig12}
-        \end{subfigure}
-        \caption{Plots of sawtooth waves for different periods}
-        \label{fig:test6}
-    \end{figure}
+
+\begin{figure}[h]
+	\vspace{-5mm}
+	\centering
+	\includegraphics[width=\textwidth]{Ex1_Figs/saw400.jpg}
+	\vspace{-15mm}
+	\caption{$T = 400 \mu s$}
+	\label{fig:RL4}
+	\includegraphics[width=\textwidth]{Ex1_Figs/saw1100.jpg}
+	\vspace{-15mm}
+	\caption{$T = 1100 \mu s$}
+	\label{fig:RL4}
+\end{figure}
 
 \pagebreak
 
@@ -558,7 +471,7 @@ Using the same MATLAB scripts in Exercise 1 (heun.m,midpoint.m and ralston.m) th
     \label{fig:Exact Value}
 \end{figure}
 
-Figure \ref{fig:Exact Value} shows the exact solution to the ODE. Figure \ref{fig:Heun Method} shows the estimated solution using Heun's method. When the estimated solution is subtracted from the exact solution, the resulting function is the error function for Heun's method which is plotted in figure \ref{fig:heun_error}.
+Figure \ref{fig:Exact Value} shows the exact solution to the ODE. Figure \ref{fig:Heun Method} shows the estimated solution using Heun's method. When the estimated solution is subtracted from the exact solution, the resulting function is the error function for Heun's method which is plotted in Figure \ref{fig:heun_error}.
 
 \begin{figure}[h]
 \begin{subfigure}{.5\textwidth}
@@ -584,7 +497,7 @@ Figure \ref{fig:Exact Value} shows the exact solution to the ODE. Figure \ref{fi
 \clearpage
 
 \subsubsection{Midpoint method}
-The same analysis is used to obtain the error function for Midpoint method. The exact solution for the ODE is the same as that for Heun's method (Figure \ref{fig:Exact Value}).  Figure \ref{fig:midpoint_method} shows the estimated solution obtained by using the midpoint method. Similar to Heun's error analysis, when the estimated solution is subtracted from the exact solution, the resulting function is the error function. This error function is plotted in figure \ref{fig:midpoint_error}.
+The same analysis is used to obtain the error function for Midpoint method. The exact solution for the ODE is the same as that for Heun's method (Figure \ref{fig:Exact Value}).  Figure \ref{fig:midpoint_method} shows the estimated solution obtained by using the midpoint method. Similar to Heun's error analysis, when the estimated solution is subtracted from the exact solution, the resulting function is the error function. This error function is plotted in Figure \ref{fig:midpoint_error}.
 
 \begin{figure}[h]
 \begin{subfigure}{.5\textwidth}
@@ -607,7 +520,7 @@ The same analysis is used to obtain the error function for Midpoint method. The 
 
 
 \subsubsection{Ralston method}
-Making use of the same error analysis technique as above (for Heun's and Midpoint methods), the estimated value obtained using the Ralston method is in figure \ref{fig:ralston_method} and the error function is plotted in figure \ref{fig:ralston_error}.
+Making use of the same error analysis technique as above (for Heun's and Midpoint methods), the estimated value obtained using the Ralston method is in Figure \ref{fig:ralston_method} and the error function is plotted in Figure \ref{fig:ralston_error}.
 
 \begin{figure}[h]
 \begin{subfigure}{.5\textwidth}
@@ -632,7 +545,7 @@ Making use of the same error analysis technique as above (for Heun's and Midpoin
 
 \subsection{Comparison}
 For Heun's error function, the error increases from
-$\underline{+}1.1*10^{-3}$ at 0 to $\underline{+}5.9*10^{-3}$ at $5*10^{-3}$. For the Midpoint error function, the error icreases from [-0.01,0] at 0 to [-0.011,0.01] at $5*10^{-3}$.
+$\underline{+}1.1*10^{-3}$ at 0 to $\underline{+}5.9*10^{-3}$ at $5*10^{-3}$. For the Midpoint error function, the error increases from [-0.01,0] at 0 to [-0.011,0.01] at $5*10^{-3}$.
 Finally, for Ralston's error function the error increases from 0 at 0 to $\underline{+}5.9*10^{-3}$ at $5*10^{-3}$.
 
 Therefore, we can deduce that the Ralston method has the least error in approximating solutions for the linear first order ODE. %%Is this true?
@@ -645,13 +558,13 @@ Therefore, we can deduce that the Ralston method has the least error in approxim
     \label{fig:heun_error_loglog} %%heun's or ralston's?
 \end{figure}
 
-From figure \ref{fig:heun_error_loglog},it can be seen that as h increases, the error in the estimated solution using Ralston's method increases. Furthermore, the error has a positive linear relationship with h. The gradient of the straight line is approximately 2. It can be expressed as:
+From Figure \ref{fig:heun_error_loglog},it can be seen that as h increases, the error in the estimated solution using Ralston's method increases. Furthermore, the error has a positive linear relationship with h. The gradient of the straight line is approximately 2. It can be expressed as:
 
 \begin{equation}
 logE=2log(h)+constant
 \end{equation}
 
-Thus,it can be deduced that
+Thus, it can be deduced that due to all of the 3 methods (Heun's, Midpoint and Ralston) have error of order $h^2$ therefore all their respective Log-Log plots are similar.
 
 \begin{equation}
 E(y,x)=O(h^2);
@@ -675,23 +588,31 @@ E(y,x)=O(h^2);
 
 From Kirchoff's Voltage Law (KVL) the sum of all the voltages in a closed loop must sum to 0 V. Therefore from this we can derive the equation $V_{in}(t) = v_L(t)+v_R(t)+v_C(t)$. All of the voltages in the closed loop current which flows through them, all being equal to the inductor current. The voltage across a conductor is the inductance multiplied by the derivative of it's current, the voltage across the resistor is equal to it's resistance multiplied by the current travelling through it and the voltage across the capacitor is the charge held within the capacitor divided by the capacitance of the capacitor. Substituting these characteristics into the equation above gives us the equation:
 
-\[ L \frac{d}{dt}i_L(t) + R i_L(t) + \frac{1}{C}\int\limits_0^t i_L(t) \ dt = V_{in}(t)\]
+\begin{equation}
+	L \frac{d}{dt}i_L(t) + R i_L(t) + \frac{1}{C}\int\limits_0^t i_L(t) \ dt = V_{in}(t)
+\end{equation}
 
 Substituting $i_L(t)$ for $\frac{d}{dt}q_C(t)$ you make the equation:
 
-\[ L \frac{d^2}{dt^2}q_C(t) + R\frac{d}{dt}q_C(t) + \frac{1}{C}q_C(t) = V_{in}(t)\]
+\begin{equation}
+	L \frac{d^2}{dt^2}q_C(t) + R\frac{d}{dt}q_C(t) + \frac{1}{C}q_C(t) = V_{in}(t)
+\end{equation}
 
 We were then able to turn this second order ODE into a set of 2 coupled first order ODEs through the use of equating $q_C'(t)$ = $y(t)$ and substituting $q_C(t)$ for $x(t)$ we have the coupled equations:
 
-\[y(t) = x'(t) \text{\hspace{5mm}and \hspace{5mm}}y'(t) = \frac{1}{L}[V_{in}(t)  - Ry(t) - \frac{1}{C}x(t)] \]
+\begin{equation}
+	y(t) = x'(t) \text{\hspace{5mm}and \hspace{5mm}}y'(t) = \frac{1}{L}[V_{in}(t)  - Ry(t) - \frac{1}{C}x(t)]
+\end{equation}
 
 For our project we have values:
 
-\[R = 250 \Omega, C = 3 \mu F , L = 650 mH, i_L(0) = 0 \hspace{2mm} (y_0) \text{\hspace{2mm}and\hspace{2mm}} q_C(0) = 500nC \hspace{2mm} (x_0).\]
+\begin{equation}
+	R = 250 \Omega, C = 3 \mu F , L = 650 mH, i_L(0) = 0 \hspace{2mm} (y_0) \text{\hspace{2mm}and\hspace{2mm}} q_C(0) = 500nC \hspace{2mm} (x_0)
+\end{equation}
 
 \subsection{Script Coupled Equations and Constants}
 
-Now that we have these two equations we are able to implement them into MATLAB scripf called `RLC\_script.m' by defining them as:
+Now that we have these two equations we are able to implement them into MATLAB script called `RLC\_script.m' by defining them as:
 
 \begin{verbatim}
 R = 250; L = 650*10^-3; C = 3*10^-6; %Impedance values for the components
@@ -712,15 +633,33 @@ func2 = @(x, y, t) (Vin(t) - R*y - x/C)/L; %the second coupled equation
 
 To now evaluate these coupled equations, we use the Runge Kutta 4th order 3/8 algorithm to use these two coupled equations to estimate the next point of the current $i_L$ and the charge $q_C$. The algorithm is:
 
-\[f_1(x,y,t) = y \hspace{3mm} f_2(x,y,z) = \frac{1}{L}[V_{in}(t) - Ry - \frac{x}{C}]\]
-\[k1_x = hf_1(x_i,y_i,t_i) \hspace{3mm} k1_y = hf_2(x_i,y_i,t_i)\]
-\[k2_x = hf_1(x_i+\frac{k1_x}{3},y_i+\frac{k1_y}{3},t_i+\frac{h}{3}) \hspace{5mm} k2_y = hf_2(x_i+\frac{k1_x}{3},y_i+\frac{k1_y}{3},t_i+\frac{h}{3})\]
-\[k3_x = hf_1(x_i-\frac{k1_x}{3}+k2_x,y_i-\frac{k1_y}{3}+k2_y,t_i+\frac{2h}{3}) \]
-\[k3_y = hf_2(x_i-\frac{k1_x}{3}+k2_x,y_i-\frac{k1_y}{3}+k2_y,t_i+\frac{2h}{3})\]
-\[k4_x = hf_1(x_i+k1_x-k2_x+k3_x,y_ik1_y-k2_y+k3_y,t_i+h) \]
-\[k4_y = hf_2(x_i+k1_x-k2_x+k3_x,y_ik1_y-k2_y+k3_y,t_i+h)\]
-\[x_{i+1} =x_i+\frac{k1_x+3k2_x+3k3_x+k4_x}{8} \hspace{3mm} y_{i+1} =y_i+\frac{k1_y+3k2_y+3k3_y+k4_y}{8}\]
-\[t_{i+1} = t_i + h \hspace{3mm} \text{where h is time step}\]
+\begin{equation}
+f_1(x,y,t) = y \hspace{3mm} f_2(x,y,z) = \frac{1}{L}[V_{in}(t) - Ry - \frac{x}{C}]
+\end{equation}
+\begin{equation}
+	k1_x = hf_1(x_i,y_i,t_i) \hspace{3mm} k1_y = hf_2(x_i,y_i,t_i)
+\end{equation}
+\begin{equation}
+	k2_x = hf_1(x_i+\frac{k1_x}{3},y_i+\frac{k1_y}{3},t_i+\frac{h}{3}) \hspace{5mm} k2_y = hf_2(x_i+\frac{k1_x}{3},y_i+\frac{k1_y}{3},t_i+\frac{h}{3})
+\end{equation}
+\begin{equation}
+	k3_x = hf_1(x_i-\frac{k1_x}{3}+k2_x,y_i-\frac{k1_y}{3}+k2_y,t_i+\frac{2h}{3})
+\end{equation}
+\begin{equation}
+	k3_y = hf_2(x_i-\frac{k1_x}{3}+k2_x,y_i-\frac{k1_y}{3}+k2_y,t_i+\frac{2h}{3})
+\end{equation}
+\begin{equation}
+	k4_x = hf_1(x_i+k1_x-k2_x+k3_x,y_ik1_y-k2_y+k3_y,t_i+h)
+\end{equation}
+\begin{equation}
+	k4_y = hf_2(x_i+k1_x-k2_x+k3_x,y_ik1_y-k2_y+k3_y,t_i+h)
+\end{equation}
+\begin{equation}
+	x_{i+1} =x_i+\frac{k1_x+3k2_x+3k3_x+k4_x}{8} \hspace{3mm} y_{i+1} =y_i+\frac{k1_y+3k2_y+3k3_y+k4_y}{8}
+\end{equation}
+\begin{equation}
+	t_{i+1} = t_i + h \hspace{3mm} \text{where h is time step}
+\end{equation}
 
 The way that this works is it starts from a single point and calculates a gradient to the next point, using this it then creates another slope, this is then repeated twice more using the equations above and a weighting is given to each gradient, summed together and divided by the total weighting to scale it back to uniform size, from this we are able to estimate more accurately where the next point if going to go for this time step.
 
@@ -782,79 +721,78 @@ title('Step Response')
 
 	\vspace{-6mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/Step.png}
-	\vspace{-6mm}
+	\vspace{-3mm}
   	\caption{$V_{in}(t)= 5$}
   	\label{fig:ex3g1}
 
 \end{wrapfigure}
 
-    \vspace{0mm}The step response causes a sudden rise of voltage up to 5 V, due to the inductor not being able to change current instantaneously the voltage out starts from 0 V and as you can see on Figure 2. It increases up to around 1.8 V at this point the capacitor starts to reduce the rate of it charging up due to saturating in charge, as the voltage out starts to tend to 0, the capacitor emits charge causing a negative current through the inductor. As this goes on, the voltage across the capacitor tends to 5 V causing no current to flow through the inductor and the resistor, causing the output voltage to tend to 0 V.
+    \vspace{0mm}The step response as shown by Figure \ref{fig:ex3g1} causes a sudden rise of voltage up to 5 V, due to the inductor not being able to change current instantaneously the voltage out starts from 0 V and as you can see on Figure \ref{fig:ex3g1}. It increases up to around 1.8 V at this point the capacitor starts to reduce the rate of it charging up due to saturating in charge, as the voltage out starts to tend to 0, the capacitor emits charge causing a negative current through the inductor. As this goes on, the voltage across the capacitor tends to 5 V causing no current to flow through the inductor and the resistor, causing the output voltage to tend to 0 V.
 
 \subsubsection{Sine Wave Input}
 
 \begin{wrapfigure}[13]{r!}{0.46\textwidth}
-    \vspace{-5mm}
-
+    \vspace{-15mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/5Sine2.png}
-	\vspace{-6mm}
+	\vspace{-3mm}
   	\caption{$V_{in}(t)= 5sin(2 \pi 5t)$}
   	\label{fig:ex3g2}
 
 \end{wrapfigure}
 
-\vspace{0mm}In Figure 3 the input is a sine wave of amplitude 5 V and a frequency of 5 Hz, as the sine wave moves away from zero it causes a sharp increase in the current going through the inductor and therefore causes a sharp rise on the voltage out, this then attenuates to form the shape of a sine wave of amplitude is $\approx 0.1$ V and leads the input voltage by a phase difference of $\frac{\pi}{2}$ this is relative to the frequency of the input and the complex impedance of both the inductor and the capacitor being $j\omega L$ and $\frac{1}{j\omega C}$ respectively. We chose the final time as 0.2 s to show how initially the output changes but then follows the shape of the input eventually.
+In Figure \ref{fig:ex3g2} the input is a sine wave of amplitude 5 V and a frequency of 5 Hz, as the sine wave moves away from zero it causes a sharp increase in the current going through the inductor and therefore causes a sharp rise on the voltage out, this then attenuates to form the shape of a sine wave of amplitude is $\approx 0.1$ V and leads the input voltage by a phase difference of $\frac{\pi}{2}$ this is relative to the frequency of the input and the complex impedance of both the inductor and the capacitor being $j\omega L$ and $\frac{1}{j\omega C}$ respectively. We chose the final time as 0.2 s to show how initially the output changes but then follows the shape of the input eventually.
 
 \begin{wrapfigure}[16]{r}{0.46\textwidth}
     \vspace{-15mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/100Sine.png}
-	\vspace{-6mm}
+	\vspace{-3mm}
   	\caption{$V_{in}(t)= 5sin(2 \pi 100t)$}
   	\label{fig:ex3g3}
 \end{wrapfigure}
 
-\vspace{6mm}In Figure 4 the input is a sine wave of amplitude 5 V and a frequency of 100 Hz. Upon the start of the wave, the output voltage rises slower than the voltage of the input, due to the fact that the rate of change of the inductor current cannot shange instantaneously and will eventually equal the frequency of the input. This causes a slight phase difference and the amplitude is far greater than the 5 Hz input, resulting in an amplitude of $\approx 4$ V. This greater output voltage is due to being a band pass filter, low frequencies as we can see, 5 Hz for example attenuate to a value close to 0 V whereas at this frequency the output voltage is close to the input voltage and at some frequency greater than this, the same result as the 5 Hz wave will be apparent.
+\vspace{6mm}In Figure \ref{fig:ex3g3} the input is a sine wave of amplitude 5 V and a frequency of 100 Hz. Upon the start of the wave, the output voltage rises slower than the voltage of the input, due to the fact that the rate of change of the inductor current cannot change instantaneously and will eventually equal the frequency of the input. This causes a slight phase difference and the amplitude is far greater than the 5 Hz input, resulting in an amplitude of $\approx 4$ V. This greater output voltage is due to being a band pass filter, low frequencies as we can see, 5 Hz for example attenuate to a value close to 0 V whereas at this frequency the output voltage is close to the input voltage and at some frequency greater than this, the same result as the 5 Hz wave will be apparent.
 
 \begin{wrapfigure}[11]{r}{0.46\textwidth}
     \vspace{-33mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/500Sine.png}
-	\vspace{-6mm}
+	\vspace{-3mm}
   	\caption{$V_{in}(t)= 5sin(2 \pi 500t)$}
   	\label{fig:ex3g4}
 \end{wrapfigure}
 
-\vspace{2mm}In Figure 5 the input is a sine wave of amplitude 5 V and a frequency of 500 Hz. The response is very similar to Figure 3's output signal, rising initially to a value that is greater than its steady state amplitude in which is $\approx 0.5$ V which is far 10 times less than the input amplitude, and less than the the amplitude of the Figure 4. This suggests that the center of the band pass filter is based around 100 Hz as is seen in Figure 4 and therefore the outer bounds falling in amplitude at frequencies greater and less than this.
+\vspace{2mm}In Figure \ref{fig:ex3g4} the input is a sine wave of amplitude 5 V and a frequency of 500 Hz. The response is very similar to Figure \ref{fig:ex3g2}'s output signal, rising initially to a value that is greater than its steady state amplitude in which is $\approx 0.5$ V which is far 10 times less than the input amplitude, and less than the the amplitude of the Figure \ref{fig:ex3g3}. This suggests that the center of the band pass filter is based around 100 Hz as is seen in Figure \ref{fig:ex3g3} and therefore the outer bounds falling in amplitude at frequencies greater and less than this.
 
 \subsubsection{Square Wave Inputs}
 
 \begin{wrapfigure}[11]{r}{0.46\textwidth}
     \vspace{-40mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/5Squ1.png}
-	\vspace{-6mm}
+	\vspace{-3mm}
   	\caption{$V_{in}(t)= 5square(2 \pi 5t)$}
   	\label{fig:ex3g5}
 \end{wrapfigure}
 
-\vspace{3mm}In Figure 6 the input is a square wave of frequency 5 Hz and amplitude 5 V. At this frequency, the response is identical to the response of a step response due to there being enough time for the wave to return to 0 V after the change in amplitude, the only difference is when the voltage drops to -5 V the step response is equal to the positive step response but negative. The time scale was chosen to show 1 and a quarter wavelengths so that it is easy to see that each time the sign changes, the response is identical.
+\vspace{3mm}In Figure \ref{fig:ex3g5} the input is a square wave of frequency 5 Hz and amplitude 5 V. At this frequency, the response is identical to the response of a step response due to there being enough time for the wave to return to 0 V after the change in amplitude, the only difference is when the voltage drops to -5 V the step response is equal to the positive step response but negative. The time scale was chosen to show 1 and a quarter wavelengths so that it is easy to see that each time the sign changes, the response is identical.
 
 \begin{wrapfigure}[8]{r}{0.46\textwidth}
-    \vspace{-40mm}
+    \vspace{-38mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/100Squ1.png}
-	\vspace{-6mm}
+	\vspace{-3mm}
   	\caption{$V_{in}(t)= 5square(2 \pi 100t)$}
   	\label{fig:ex3g6}
 \end{wrapfigure}
 
-\vspace{5mm}In Figure 7 the input is a square wave of frequency 100 Hz and amplitude 5 V. At this frequency, the output follows the characteristic of a sine wave due to the step response giving a sinusoidal peak, this is repeated but switched in direction as the sign of the input changes, causing a periodic signal on the output respresenting something somewhat similar to a sine wave.
+\vspace{5mm}In Figure \ref{fig:ex3g6} the input is a square wave of frequency 100 Hz and amplitude 5 V. At this frequency, the output follows the characteristic of a sine wave due to the step response giving a sinusoidal peak, this is repeated but switched in direction as the sign of the input changes, causing a periodic signal on the output representing something somewhat similar to a sine wave.
 
 \begin{wrapfigure}[17]{r}{0.46\textwidth}
     \vspace{-5mm}
   		\includegraphics[width=0.45\textwidth]{Ex3_Figs/500Squ1.png}
-	\vspace{-6mm}
+	\vspace{-3mm}
   	\caption{$V_{in}(t)= 5square(2 \pi 500t)$}
   	\label{fig:ex3g7}
 \end{wrapfigure}
 
-\vspace{5mm}In Figure 8, the input is a square wave of frequency 500 Hz and amplitude 5 V. At this frequency, the step responses cause an output signal which is similar to a periodic tent function of exponential charge and discharge, this is due to the fact that the square wave changes sign too rapidly for the signal to smooth off or return to zero before the next half wavelength. As it gets to the 4th period of the input, the output settles to an amplitude of $\approx 1$ V. In which looking back over Figures 6, 7 and 8. The bandpass filter seems to give similar changes in output amplitude relative to the input amplitude, where at 100 Hz, in Figure 7 the magnitude is greater than both magnitudes. Confirming that the center frequency if based around 100 Hz and the bandwidth is based between 5 Hz and 500 Hz.
+\vspace{5mm}In Figure \ref{fig:ex3g7}, the input is a square wave of frequency 500 Hz and amplitude 5 V. At this frequency, the step responses cause an output signal which is similar to a periodic tent function of exponential charge and discharge, this is due to the fact that the square wave changes sign too rapidly for the signal to smooth off or return to zero before the next half wavelength. As it gets to the 4th period of the input, the output settles to an amplitude of $\approx 1$ V. In which looking back over Figure \ref{fig:ex3g5}, Figure \ref{fig:ex3g6} and Figure \ref{fig:ex3g7}. The bandpass filter seems to give similar changes in output amplitude relative to the input amplitude, where at 100 Hz, in Figure 7 the magnitude is greater than both magnitudes. Confirming that the center frequency if based around 100 Hz and the bandwidth is based between 5 Hz and 500 Hz.
 
 \subsubsection{Exponential Decay Input}
 
@@ -866,7 +804,7 @@ title('Step Response')
   	\label{fig:ex3g8}
 \end{wrapfigure}
 
-In Figure 9, the input is a decaying exponential in which it's time constant $\tau_C = 3 (ms)^2$ causing a sharp drop in amplitude towards 0 V in a time of less than 5 ms, causing an output in which is incredibly similar to the output of the step responss (Figure 2). The only main difference being that the max amplitude of the output of Figure 9 is $\approx 1$ V, $\approx 0.8$ V less than the max amplitude of Figure 2 in which the amplitude was $\approx 1.8$ V.
+In Figure \ref{fig:ex3g8}, the input is a decaying exponential in which it's time constant $\tau_C = 3 (ms)^2$ causing a sharp drop in amplitude towards 0 V in a time of less than 5 ms, causing an output in which is incredibly similar to the output of the step response (Figure \ref{fig:ex3g1}). The only main difference being that the max amplitude of the output of Figure \ref{fig:ex3g8} is $\approx 1$ V, $\approx 0.8$ V less than the max amplitude of Figure \ref{fig:ex3g1} in which the amplitude was $\approx 1.8$ V.
 
 \pagebreak
 
@@ -907,7 +845,7 @@ Therefore by making v = 0.45, thus never becoming unstable, if the x direction s
 \begin{alltt}
 for i = 1:N-2
     xa(i+1) = xa(i) + h; %next step in x direction
-    ya(i+1) = feval(Tin, xa(i+1)); %calculate heat inital points
+    ya(i+1) = feval(Tin, xa(i+1)); %calculate heat initial points
 end
 t = t0; %initial time value
 plot(xa, ya, '.', 'markersize', 4); %plot graph at t = 0
@@ -938,20 +876,22 @@ The way that it works is that we use a for loop to calculate the initial tempera
   		\includegraphics[width=0.45\textwidth]{Ex4_Figs/FiniteTent.png}
 	\vspace{-4mm}
   	\caption{$T_{in}(x)= tent(x)$}
+	\label{fig:ex4g1}
   		\includegraphics[width=0.45\textwidth]{Ex4_Figs/FiniteSine.png}
 	\vspace{-4mm}
   	\caption{$T_{in}(x)= sin(2{\pi}x)$}
+	\label{fig:ex4g2}
     \includegraphics[width=0.45\textwidth]{Ex4_Figs/FiniteSineabs.png}
     \vspace{-4mm}
     \caption{$T_{in}(x)= |sin(2{\pi}x)|$}
-  	\label{fig:ex4g1}
+  	\label{fig:ex4g3}
 \end{wrapfigure}
 
-As is shown in Figure 10, for the tent function the temperature decreases as it tends towards 0 and 1 from the centre of 0.5. As it steps through time, the heat tries to diffuse evenly within the object, this is shown by as time goes on, the heat decreases within the body and if we were to go further into time, the heat would altogether tend to zero across the body.
+As is shown in Figure \ref{fig:ex4g1}, for the tent function the temperature decreases as it tends towards 0 and 1 from the centre of 0.5. As it steps through time, the heat tries to diffuse evenly within the object, this is shown by as time goes on, the heat decreases within the body and if we were to go further into time, the heat would altogether tend to zero across the body.
 
-\vspace{3mm}In Figure 11 you can see the sine function in which meets the boundary conditions, having `positive' and `negative' temperatures, they have identical characterisics of how the temperature is dissipated. The central point at x = 0.5 remains equal to 0 due to the equation taking both points either side of it and multiplying with v, in which they both have the same magnitude, but different signs so when added together they cancel and cause the temperature to remain at 0 for the time being.
+\vspace{3mm}In Figure \ref{fig:ex4g2} you can see the sine function in which meets the boundary conditions, having `positive' and `negative' temperatures, they have identical characteristics of how the temperature is dissipated. The central point at x = 0.5 remains equal to 0 due to the equation taking both points either side of it and multiplying with v, in which they both have the same magnitude, but different signs so when added together they cancel and cause the temperature to remain at 0 for the time being.
 
-\vspace{3mm}In Figure 12, the absolute value of the sine wave was taken in which the reason it differs with the standard sine curve is that due to now across the centre, on either side the point they are no longer opposite in magnitude, therefore the point at the centre increases in magnitude as the heat disperses across the body, trying to uniformally distribute it.
+\vspace{3mm}In Figure \ref{fig:ex4g3}, the absolute value of the sine wave was taken in which the reason it differs with the standard sine curve is that due to now across the centre, on either side the point they are no longer opposite in magnitude, therefore the point at the centre increases in magnitude as the heat disperses across the body, trying to uniformly distribute it.
 
 \pagebreak
 
@@ -959,16 +899,16 @@ As is shown in Figure 10, for the tent function the temperature decreases as it 
 	\includegraphics[width=0.45\textwidth]{Ex4_Figs/sinpi.png}
 	\vspace{-3mm}
 	\caption{$T_{in}(x)= sin(\pi x)$}
-	\label{fig:test1}
+	\label{fig:ex4g4}
 		\includegraphics[width=0.45\textwidth]{Ex4_Figs/poly.png}
 		\vspace{-3mm}
 	\caption{$T_{in}(x)= -40x^4 +72x^3 -38x^2 +6x$}
-	\label{fig:test2}
+	\label{fig:ex4g5}
 \end{wrapfigure}
 
-In Figure 13, the input is half of a sine wave in which you can simply see as time goes on, throughout the body, the heat dissipates, tending towards 0.
+In Figure \ref{fig:ex4g4}, the input is half of a sine wave in which you can simply see as time goes on, throughout the body, the heat dissipates, tending towards 0.
 
-\vspace{4mm}In Figure 14, the input is a polynomial with the roots $x$ = 0, 0.3, 0.5 and 1 showing a very random distribution of the heat throughout the body, at the start of time, the heat from $0 < x < 0.5$ smooths off a lot quicker than  the second half of the graph due to the fact that there is a maximum at the point of $x \approx 0.83$ this takes a while for the heat to dissipate. As with all the rest, as time travels towards infinity, the heat will tend to 0, unifomally across the body.
+\vspace{4mm}In Figure \ref{fig:ex4g5}, the input is a polynomial with the roots $x$ = 0, 0.3, 0.5 and 1 showing a very random distribution of the heat throughout the body, at the start of time, the heat from $0 < x < 0.5$ smooths off a lot quicker than  the second half of the graph due to the fact that there is a maximum at the point of $x \approx 0.83$ this takes a while for the heat to dissipate. As with all the rest, as time travels towards infinity, the heat will tend to 0, uniformly across the body.
 
 \vspace{40mm}
 \subsection{Bonus Exercises}
@@ -979,18 +919,18 @@ In Figure 13, the input is half of a sine wave in which you can simply see as ti
 	\includegraphics[width=0.45\textwidth]{Ex4_Figs/1-xbcdiff.png}
 	\vspace{-3mm}
 	\caption{$T_{in}(x)= 1-x$}
-	\label{fig:bcnm}
+	\label{fig:ex4g6}
 		\includegraphics[width=0.45\textwidth]{Ex4_Figs/Tentbc.png}
 		\vspace{-3mm}
 	\caption{$T_{in}(x)= tent(x) \hspace{2mm} y_0(t) = 0.75, y_1(t) = 0.25$}
-	\label{fig:bmsn2}
+	\label{fig:ex4g7}
 \end{wrapfigure}
 
-In Figure 15, the input was the straigt line of $T_in(x) = 1-x$ where the left hand portion of the graph doesn't meet the left hand condition. With the boundary condition both being 0, it causes the temperature from just after x = 0 to fall away considerably quicker than any other portion of the graph due to the greater difference the boundary condition and the points to the side of it, as you can see on Figure 15.
+In Figure \ref{fig:ex4g6}, the input was the straight line of $T_in(x) = 1-x$ where the left hand portion of the graph doesn't meet the left hand condition. With the boundary condition both being 0, it causes the temperature from just after x = 0 to fall away considerably quicker than any other portion of the graph due to the greater difference the boundary condition and the points to the side of it, as you can see on Figure \ref{fig:ex4g6}.
 
 \subsubsection{Non Zero Boundary Conditions}
 
-In Figure 16, the input is a tent function, but rather than having boundary conditions in which were equal to 0, the boundary condition at x = 0, the temperature is equal to 0.75 and at x = 1, the value is equal to 0.25. As you can see the points to the left of the graph all pull up towards the value of 0.75 and on the other side, all the points are pulled towards the 0.25. As time goes to infinity, you would get the heat distributed as a straight line going from 0.75 to 0.25.
+In Figure \ref{fig:ex4g7}, the input is a tent function, but rather than having boundary conditions in which were equal to 0, the boundary condition at x = 0, the temperature is equal to 0.75 and at x = 1, the value is equal to 0.25. As you can see the points to the left of the graph all pull up towards the value of 0.75 and on the other side, all the points are pulled towards the 0.25. As time goes to infinity, you would get the heat distributed as a straight line going from 0.75 to 0.25.
 
 \pagebreak
 
@@ -1001,8 +941,9 @@ In Figure 16, the input is a tent function, but rather than having boundary cond
 	\includegraphics[width=0.45\textwidth]{Ex4_Figs/timevar.png}
 	\vspace{-3mm}
 	\caption{$T_{in}(x)= tent(x) \hspace{2mm} y_0(t) = y_1(t) = 20t$}
+	\label{fig:ex4g8}
 \end{wrapfigure}
 
-In Figure 17, the input is a tent function, initially with zero boundary conditions, but as time moves forward, the temperature at the end points increases with the equation of $y_0(t) = y_1(t) = 20t$. So the heat in the body will end up heating up from the edges inwards.
+In Figure \ref{fig:ex4g8}, the input is a tent function, initially with zero boundary conditions, but as time moves forward, the temperature at the end points increases with the equation of $y_0(t) = y_1(t) = 20t$. So the heat in the body will end up heating up from the edges inwards.
 
 \end{document}

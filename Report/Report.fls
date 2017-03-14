@@ -155,87 +155,58 @@ INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/RL_circuit.png
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1095.tfm
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heuns_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heuns_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heuns_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/ralston_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/ralston_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/ralston_step.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/substep.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/substep.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/substep.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/subt2.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/subt2.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/subt2.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/subt.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/subt.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/subt.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin15.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin15.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin15.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin150.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin150.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin150.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin400.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin400.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin400.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin1100.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin1100.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin1100.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ15.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ15.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ15.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ150.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ150.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ150.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ400.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ400.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ400.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ1100.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ1100.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ1100.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw15.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw15.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw15.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw150.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw150.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw150.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw400.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw400.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw400.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw1100.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw1100.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw1100.jpg
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png
+INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/midpoint_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/midpoint_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/midpoint_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_step.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heun_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heun_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heun_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/mid_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/mid_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/mid_t2.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/ral_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/ral_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/ral_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heuns_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heuns_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heuns_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/mid_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/mid_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/mid_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/rals_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/rals_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/rals_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_t2.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_t.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine150g.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine150g.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine150g.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine15g.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine15g.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine15g.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine400.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine400.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine400.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine1100.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine1100.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine1100.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square150.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square150.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square150.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square15.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square15.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square15.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square400.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square400.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square400.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square1100.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square1100.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square1100.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth150.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth150.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth150.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth15.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth15.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth15.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth400.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth400.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth400.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth1100.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth1100.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth1100.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png
-INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error.png
 INPUT /home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error.png
@@ -319,11 +290,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb

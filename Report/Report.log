@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.22)  13 MAR 2017 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.22)  14 MAR 2017 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -565,7 +565,44 @@ Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 \c@subtable=\count148
 ) (/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
-) (/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux)
+) (/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+
+LaTeX Warning: Label `fig:RL4' multiply defined.
+
+)
 \openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -675,346 +712,292 @@ File: Ex1_Figs/RL_circuit.png Graphic file (type png)
 Package pdftex.def Info: Ex1_Figs/RL_circuit.png used on input line 34.
 (pdftex.def)             Requested size: 221.95676pt x 137.57843pt.
  [2 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/RL_circuit.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 99.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 103.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (27.99364pt too wide) in paragraph at lines 136--136
-[]\T1/cmtt/m/n/10.95 function [t,y] = midpoint(func, t0, y0, tf, h)     % y = i_L(t), func = equation (2),[] 
+Overfull \hbox (5.36015pt too wide) in paragraph at lines 140--140
+[]\T1/cmtt/m/n/10.95 function [t,y] = midpoint(func, t0, y0, tf, h) % y = i_L(t), func = equation (2),[] 
  []
 
-[3] [4] <Ex1_Figs/heuns_step.png, id=30, 562.1pt x 421.575pt>
-File: Ex1_Figs/heuns_step.png Graphic file (type png)
- <use Ex1_Figs/heuns_step.png>
-Package pdftex.def Info: Ex1_Figs/heuns_step.png used on input line 191.
-(pdftex.def)             Requested size: 221.95676pt x 166.4656pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--202
-
- []
-
-<Ex1_Figs/ralston_step.png, id=31, 562.1pt x 421.575pt>
-File: Ex1_Figs/ralston_step.png Graphic file (type png)
- <use Ex1_Figs/ralston_step.png>
-Package pdftex.def Info: Ex1_Figs/ralston_step.png used on input line 208.
-(pdftex.def)             Requested size: 203.83109pt x 142.26576pt.
- <Ex1_Figs/midpoint_step.png, id=32, 562.1pt x 421.575pt>
-File: Ex1_Figs/midpoint_step.png Graphic file (type png)
- <use Ex1_Figs/midpoint_step.png>
-Package pdftex.def Info: Ex1_Figs/midpoint_step.png used on input line 213.
-(pdftex.def)             Requested size: 203.83109pt x 142.26576pt.
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 207--217
-[]$[]$ $[]$ 
- []
-
-[5 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heuns_step.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/ralston_step.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/midpoint_step.png (PNG copy)>] <Ex1_Figs/all_step.png, id=37, 562.1pt x 421.575pt>
-File: Ex1_Figs/all_step.png Graphic file (type png)
- <use Ex1_Figs/all_step.png>
-Package pdftex.def Info: Ex1_Figs/all_step.png used on input line 245.
-(pdftex.def)             Requested size: 221.95676pt x 166.4656pt.
- [6 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_step.png (PNG copy)>] <Ex1_Figs/heun_t2.png, id=41, 562.1pt x 421.575pt>
-File: Ex1_Figs/heun_t2.png Graphic file (type png)
- <use Ex1_Figs/heun_t2.png>
-Package pdftex.def Info: Ex1_Figs/heun_t2.png used on input line 258.
-(pdftex.def)             Requested size: 221.95676pt x 166.4656pt.
- <Ex1_Figs/mid_t2.png, id=42, 562.1pt x 421.575pt>
-File: Ex1_Figs/mid_t2.png Graphic file (type png)
- <use Ex1_Figs/mid_t2.png>
-Package pdftex.def Info: Ex1_Figs/mid_t2.png used on input line 281.
-(pdftex.def)             Requested size: 203.83109pt x 142.26576pt.
- <Ex1_Figs/ral_t2.png, id=43, 562.1pt x 421.575pt>
-File: Ex1_Figs/ral_t2.png Graphic file (type png)
- <use Ex1_Figs/ral_t2.png>
-Package pdftex.def Info: Ex1_Figs/ral_t2.png used on input line 286.
-(pdftex.def)             Requested size: 203.83109pt x 142.26576pt.
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 280--290
-[]$[]$ $[]$ 
- []
-
-[7 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heun_t2.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/mid_t2.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/ral_t2.png (PNG copy)>]
-
-Package wrapfig Warning: Collision between wrapping environments on input line 300.
-
-<Ex1_Figs/heuns_t.png, id=49, 562.1pt x 421.575pt>
-File: Ex1_Figs/heuns_t.png Graphic file (type png)
- <use Ex1_Figs/heuns_t.png>
-Package pdftex.def Info: Ex1_Figs/heuns_t.png used on input line 302.
-(pdftex.def)             Requested size: 221.95676pt x 166.4656pt.
+[3] [4] <Ex1_Figs/substep.jpg, id=30, 1024.82875pt x 873.2625pt>
+File: Ex1_Figs/substep.jpg Graphic file (type jpg)
+ <use Ex1_Figs/substep.jpg>
+Package pdftex.def Info: Ex1_Figs/substep.jpg used on input line 209.
+(pdftex.def)             Requested size: 452.9679pt x 385.96892pt.
+ [5 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/substep.jpg>] <Ex1_Figs/subt2.jpg, id=34, 950.55125pt x 690.58pt>
+File: Ex1_Figs/subt2.jpg Graphic file (type jpg)
+ <use Ex1_Figs/subt2.jpg>
+Package pdftex.def Info: Ex1_Figs/subt2.jpg used on input line 236.
+(pdftex.def)             Requested size: 452.9679pt x 329.08264pt.
+ [6 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/subt2.jpg>] <Ex1_Figs/subt.jpg, id=40, 949.5475pt x 684.5575pt>
+File: Ex1_Figs/subt.jpg Graphic file (type jpg)
+ <use Ex1_Figs/subt.jpg>
+Package pdftex.def Info: Ex1_Figs/subt.jpg used on input line 264.
+(pdftex.def)             Requested size: 452.9679pt x 326.55743pt.
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 308.
-
-<Ex1_Figs/mid_t.png, id=50, 562.1pt x 421.575pt>
-File: Ex1_Figs/mid_t.png Graphic file (type png)
- <use Ex1_Figs/mid_t.png>
-Package pdftex.def Info: Ex1_Figs/mid_t.png used on input line 324.
-(pdftex.def)             Requested size: 203.83109pt x 142.26576pt.
- <Ex1_Figs/rals_t.png, id=51, 562.1pt x 421.575pt>
-File: Ex1_Figs/rals_t.png Graphic file (type png)
- <use Ex1_Figs/rals_t.png>
-Package pdftex.def Info: Ex1_Figs/rals_t.png used on input line 329.
-(pdftex.def)             Requested size: 203.83109pt x 142.26576pt.
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 323--333
-[]$[]$ $[]$ 
- []
-
-<Ex1_Figs/all_t2.png, id=52, 562.1pt x 421.575pt>
-File: Ex1_Figs/all_t2.png Graphic file (type png)
- <use Ex1_Figs/all_t2.png>
-Package pdftex.def Info: Ex1_Figs/all_t2.png used on input line 342.
-(pdftex.def)             Requested size: 203.83109pt x 142.26576pt.
- <Ex1_Figs/all_t.png, id=53, 562.1pt x 421.575pt>
-File: Ex1_Figs/all_t.png Graphic file (type png)
- <use Ex1_Figs/all_t.png>
-Package pdftex.def Info: Ex1_Figs/all_t.png used on input line 347.
-(pdftex.def)             Requested size: 203.83109pt x 142.26576pt.
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 341--351
-[]$[]$ $[]$ 
- []
-
-[8 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/heuns_t.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/mid_t.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/rals_t.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_t2.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/all_t.png (PNG copy)>] <Ex1_Figs/allsine150g.png, id=57, 562.1pt x 421.575pt>
-File: Ex1_Figs/allsine150g.png Graphic file (type png)
- <use Ex1_Figs/allsine150g.png>
-Package pdftex.def Info: Ex1_Figs/allsine150g.png used on input line 371.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
- <Ex1_Figs/allsine15g.png, id=58, 562.1pt x 421.575pt>
-File: Ex1_Figs/allsine15g.png Graphic file (type png)
- <use Ex1_Figs/allsine15g.png>
-Package pdftex.def Info: Ex1_Figs/allsine15g.png used on input line 377.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
- <Ex1_Figs/allsine400.png, id=59, 562.1pt x 421.575pt>
-File: Ex1_Figs/allsine400.png Graphic file (type png)
- <use Ex1_Figs/allsine400.png>
-Package pdftex.def Info: Ex1_Figs/allsine400.png used on input line 383.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
- <Ex1_Figs/allsine1100.png, id=60, 562.1pt x 421.575pt>
-File: Ex1_Figs/allsine1100.png Graphic file (type png)
- <use Ex1_Figs/allsine1100.png>
-Package pdftex.def Info: Ex1_Figs/allsine1100.png used on input line 389.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 369--393
-[]$[]$ $[]$
- []
+LaTeX Warning: Reference `fig:RL12' on page 7 undefined on input line 271.
 
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 369--393
-[]$ $[]$ 
- []
+LaTeX Warning: Reference `fig:RL13' on page 7 undefined on input line 271.
 
-[9 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine150g.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine15g.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine400.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/allsine1100.png (PNG copy)>] <Ex1_Figs/square150.png, id=65, 562.1pt x 421.575pt>
-File: Ex1_Figs/square150.png Graphic file (type png)
- <use Ex1_Figs/square150.png>
-Package pdftex.def Info: Ex1_Figs/square150.png used on input line 415.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
- <Ex1_Figs/square15.png, id=66, 562.1pt x 421.575pt>
-File: Ex1_Figs/square15.png Graphic file (type png)
- <use Ex1_Figs/square15.png>
-Package pdftex.def Info: Ex1_Figs/square15.png used on input line 421.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
- <Ex1_Figs/square400.png, id=67, 562.1pt x 421.575pt>
-File: Ex1_Figs/square400.png Graphic file (type png)
- <use Ex1_Figs/square400.png>
-Package pdftex.def Info: Ex1_Figs/square400.png used on input line 427.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
- <Ex1_Figs/square1100.png, id=68, 562.1pt x 421.575pt>
-File: Ex1_Figs/square1100.png Graphic file (type png)
- <use Ex1_Figs/square1100.png>
-Package pdftex.def Info: Ex1_Figs/square1100.png used on input line 433.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
+[7 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/subt.jpg>] <Ex1_Figs/sin15.jpg, id=45, 1124.2pt x 876.27374pt>
+File: Ex1_Figs/sin15.jpg Graphic file (type jpg)
+ <use Ex1_Figs/sin15.jpg>
+Package pdftex.def Info: Ex1_Figs/sin15.jpg used on input line 289.
+(pdftex.def)             Requested size: 339.72592pt x 264.79617pt.
+ <Ex1_Figs/sin150.jpg, id=46, 1128.215pt x 876.27374pt>
+File: Ex1_Figs/sin150.jpg Graphic file (type jpg)
+ <use Ex1_Figs/sin150.jpg>
+Package pdftex.def Info: Ex1_Figs/sin150.jpg used on input line 293.
+(pdftex.def)             Requested size: 339.72592pt x 263.86021pt.
+ [8 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin15.jpg> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin150.jpg>] <Ex1_Figs/sin400.jpg, id=50, 1133.23375pt x 918.43124pt>
+File: Ex1_Figs/sin400.jpg Graphic file (type jpg)
+ <use Ex1_Figs/sin400.jpg>
+Package pdftex.def Info: Ex1_Figs/sin400.jpg used on input line 304.
+(pdftex.def)             Requested size: 452.9679pt x 367.09972pt.
+ <Ex1_Figs/sin1100.jpg, id=51, 1160.335pt x 894.34125pt>
+File: Ex1_Figs/sin1100.jpg Graphic file (type jpg)
+ <use Ex1_Figs/sin1100.jpg>
+Package pdftex.def Info: Ex1_Figs/sin1100.jpg used on input line 308.
+(pdftex.def)             Requested size: 452.9679pt x 349.13284pt.
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 413--437
-[]$ $[]$ 
- []
 
-[10 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square150.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square15.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square400.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/square1100.png (PNG copy)>] <Ex1_Figs/sawtooth150.png, id=72, 562.1pt x 421.575pt>
-File: Ex1_Figs/sawtooth150.png Graphic file (type png)
- <use Ex1_Figs/sawtooth150.png>
-Package pdftex.def Info: Ex1_Figs/sawtooth150.png used on input line 457.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
- <Ex1_Figs/sawtooth15.png, id=73, 562.1pt x 421.575pt>
-File: Ex1_Figs/sawtooth15.png Graphic file (type png)
- <use Ex1_Figs/sawtooth15.png>
-Package pdftex.def Info: Ex1_Figs/sawtooth15.png used on input line 463.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
- <Ex1_Figs/sawtooth400.png, id=74, 562.1pt x 421.575pt>
-File: Ex1_Figs/sawtooth400.png Graphic file (type png)
- <use Ex1_Figs/sawtooth400.png>
-Package pdftex.def Info: Ex1_Figs/sawtooth400.png used on input line 469.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
- <Ex1_Figs/sawtooth1100.png, id=75, 562.1pt x 421.575pt>
-File: Ex1_Figs/sawtooth1100.png Graphic file (type png)
- <use Ex1_Figs/sawtooth1100.png>
-Package pdftex.def Info: Ex1_Figs/sawtooth1100.png used on input line 475.
-(pdftex.def)             Requested size: 181.18784pt x 135.89095pt.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 455--479
-[]$ $[]$ 
- []
+[9 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin400.jpg> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sin1100.jpg>] <Ex1_Figs/squ15.jpg, id=55, 1097.09875pt x 875.27pt>
+File: Ex1_Figs/squ15.jpg Graphic file (type jpg)
+ <use Ex1_Figs/squ15.jpg>
+Package pdftex.def Info: Ex1_Figs/squ15.jpg used on input line 331.
+(pdftex.def)             Requested size: 339.72592pt x 271.02371pt.
+ <Ex1_Figs/squ150.jpg, id=56, 1108.14pt x 912.40875pt>
+File: Ex1_Figs/squ150.jpg Graphic file (type jpg)
+ <use Ex1_Figs/squ150.jpg>
+Package pdftex.def Info: Ex1_Figs/squ150.jpg used on input line 335.
+(pdftex.def)             Requested size: 339.72592pt x 279.71129pt.
+ [10
 
-[11 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth150.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth15.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth400.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/sawtooth1100.png (PNG copy)>] <Ex2_Figs/heun_error_exact.png, id=79, 500.87125pt x 401.5pt>
+ </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ15.jpg> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ150.jpg>]
+
+/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.tex:343: LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.343 	\begin{figure}[H]
+                        
+Option `H' ignored and `p' used.
+
+<Ex1_Figs/squ400.jpg, id=60, 1093.08376pt x 863.225pt>
+File: Ex1_Figs/squ400.jpg Graphic file (type jpg)
+ <use Ex1_Figs/squ400.jpg>
+Package pdftex.def Info: Ex1_Figs/squ400.jpg used on input line 346.
+(pdftex.def)             Requested size: 452.9679pt x 357.718pt.
+ <Ex1_Figs/squ1100.jpg, id=61, 985.6825pt x 887.315pt>
+File: Ex1_Figs/squ1100.jpg Graphic file (type jpg)
+ <use Ex1_Figs/squ1100.jpg>
+Package pdftex.def Info: Ex1_Figs/squ1100.jpg used on input line 350.
+(pdftex.def)             Requested size: 452.9679pt x 407.76367pt.
+
+
+LaTeX Warning: Float too large for page by 6.29706pt on input line 354.
+
+[11 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ400.jpg> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/squ1100.jpg>] <Ex1_Figs/saw15.jpg, id=65, 1121.18875pt x 862.22125pt>
+File: Ex1_Figs/saw15.jpg Graphic file (type jpg)
+ <use Ex1_Figs/saw15.jpg>
+Package pdftex.def Info: Ex1_Figs/saw15.jpg used on input line 372.
+(pdftex.def)             Requested size: 339.72592pt x 261.26018pt.
+ <Ex1_Figs/saw150.jpg, id=66, 1105.12875pt x 865.2325pt>
+File: Ex1_Figs/saw150.jpg Graphic file (type jpg)
+ <use Ex1_Figs/saw150.jpg>
+Package pdftex.def Info: Ex1_Figs/saw150.jpg used on input line 376.
+(pdftex.def)             Requested size: 339.72592pt x 265.9749pt.
+ <Ex1_Figs/saw400.jpg, id=67, 1112.155pt x 886.31125pt>
+File: Ex1_Figs/saw400.jpg Graphic file (type jpg)
+ <use Ex1_Figs/saw400.jpg>
+Package pdftex.def Info: Ex1_Figs/saw400.jpg used on input line 386.
+(pdftex.def)             Requested size: 452.9679pt x 360.9827pt.
+ <Ex1_Figs/saw1100.jpg, id=68, 1134.2375pt x 887.315pt>
+File: Ex1_Figs/saw1100.jpg Graphic file (type jpg)
+ <use Ex1_Figs/saw1100.jpg>
+Package pdftex.def Info: Ex1_Figs/saw1100.jpg used on input line 390.
+(pdftex.def)             Requested size: 452.9679pt x 354.35106pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12
+
+ </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw15.jpg> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw150.jpg>] [13 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw400.jpg> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex1_Figs/saw1100.jpg>] <Ex2_Figs/heun_error_exact.png, id=76, 500.87125pt x 401.5pt>
 File: Ex2_Figs/heun_error_exact.png Graphic file (type png)
  <use Ex2_Figs/heun_error_exact.png>
-Package pdftex.def Info: Ex2_Figs/heun_error_exact.png used on input line 556.
+Package pdftex.def Info: Ex2_Figs/heun_error_exact.png used on input line 469.
 (pdftex.def)             Requested size: 250.435pt x 200.7495pt.
- [12] <Ex2_Figs/heun_error_numerical_method.png, id=87, 510.90875pt x 408.52625pt>
+ [14
+
+] <Ex2_Figs/heun_error_numerical_method.png, id=82, 510.90875pt x 408.52625pt>
 File: Ex2_Figs/heun_error_numerical_method.png Graphic file (type png)
  <use Ex2_Figs/heun_error_numerical_method.png>
-Package pdftex.def Info: Ex2_Figs/heun_error_numerical_method.png used on input line 566.
+Package pdftex.def Info: Ex2_Figs/heun_error_numerical_method.png used on input line 479.
 (pdftex.def)             Requested size: 203.82976pt x 142.26323pt.
- <Ex2_Figs/heun_error.png, id=88, 507.8975pt x 406.51875pt>
+ <Ex2_Figs/heun_error.png, id=83, 507.8975pt x 406.51875pt>
 File: Ex2_Figs/heun_error.png Graphic file (type png)
  <use Ex2_Figs/heun_error.png>
-Package pdftex.def Info: Ex2_Figs/heun_error.png used on input line 571.
+Package pdftex.def Info: Ex2_Figs/heun_error.png used on input line 484.
 (pdftex.def)             Requested size: 203.82964pt x 142.25887pt.
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 564--575
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 477--488
 []$[]$ $[]$ 
  []
 
-[13 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error.png>] <Ex2_Figs/midpoint_error_numerical_method.png, id=96, 506.89375pt x 410.53375pt>
+[15 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_exact.png> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error_numerical_method.png> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/heun_error.png>] <Ex2_Figs/midpoint_error_numerical_method.png, id=91, 506.89375pt x 410.53375pt>
 File: Ex2_Figs/midpoint_error_numerical_method.png Graphic file (type png)
  <use Ex2_Figs/midpoint_error_numerical_method.png>
-Package pdftex.def Info: Ex2_Figs/midpoint_error_numerical_method.png used on input line 592.
+Package pdftex.def Info: Ex2_Figs/midpoint_error_numerical_method.png used on input line 505.
 (pdftex.def)             Requested size: 203.82901pt x 142.26071pt.
 File: Ex2_Figs/heun_error.png Graphic file (type png)
  <use Ex2_Figs/heun_error.png>
-Package pdftex.def Info: Ex2_Figs/heun_error.png used on input line 597.
+Package pdftex.def Info: Ex2_Figs/heun_error.png used on input line 510.
 (pdftex.def)             Requested size: 203.82964pt x 142.25887pt.
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 590--601
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 503--514
 []$[]$ $[]$ 
  []
 
-<Ex2_Figs/ralston_error_numerical_method.png, id=97, 497.86pt x 404.51125pt>
+<Ex2_Figs/ralston_error_numerical_method.png, id=92, 497.86pt x 404.51125pt>
 File: Ex2_Figs/ralston_error_numerical_method.png Graphic file (type png)
  <use Ex2_Figs/ralston_error_numerical_method.png>
-Package pdftex.def Info: Ex2_Figs/ralston_error_numerical_method.png used on input line 615.
+Package pdftex.def Info: Ex2_Figs/ralston_error_numerical_method.png used on input line 528.
 (pdftex.def)             Requested size: 203.83524pt x 142.26617pt.
- <Ex2_Figs/ralston_error.png, id=98, 494.84875pt x 402.50375pt>
+ <Ex2_Figs/ralston_error.png, id=93, 494.84875pt x 402.50375pt>
 File: Ex2_Figs/ralston_error.png Graphic file (type png)
  <use Ex2_Figs/ralston_error.png>
-Package pdftex.def Info: Ex2_Figs/ralston_error.png used on input line 620.
+Package pdftex.def Info: Ex2_Figs/ralston_error.png used on input line 533.
 (pdftex.def)             Requested size: 203.83315pt x 142.2603pt.
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 613--624
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 526--537
 []$[]$ $[]$ 
  []
 
-[14
+[16
 
- </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/midpoint_error_numerical_method.png> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/ralston_error_numerical_method.png> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/ralston_error.png>] <Ex2_Figs/errorloglogfinal1.png, id=105, 516.93124pt x 405.515pt>
+ </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/midpoint_error_numerical_method.png> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/ralston_error_numerical_method.png> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/ralston_error.png>] <Ex2_Figs/errorloglogfinal1.png, id=100, 516.93124pt x 405.515pt>
 File: Ex2_Figs/errorloglogfinal1.png Graphic file (type png)
  <use Ex2_Figs/errorloglogfinal1.png>
-Package pdftex.def Info: Ex2_Figs/errorloglogfinal1.png used on input line 643.
+Package pdftex.def Info: Ex2_Figs/errorloglogfinal1.png used on input line 556.
 (pdftex.def)             Requested size: 258.46498pt x 202.75699pt.
- [15
+ [17
 
- </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/errorloglogfinal1.png>] <Ex3_Figs/RLC.png, id=110, 628.3475pt x 490.83376pt>
+ </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex2_Figs/errorloglogfinal1.png>] <Ex3_Figs/RLC.png, id=105, 628.3475pt x 490.83376pt>
 File: Ex3_Figs/RLC.png Graphic file (type png)
  <use Ex3_Figs/RLC.png>
-Package pdftex.def Info: Ex3_Figs/RLC.png used on input line 668.
+Package pdftex.def Info: Ex3_Figs/RLC.png used on input line 581.
 (pdftex.def)             Requested size: 221.95676pt x 173.38216pt.
- [16 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/RLC.png>] [17] <Ex3_Figs/Step.png, id=117, 421.575pt x 316.18124pt>
+ [18 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/RLC.png>] [19] <Ex3_Figs/Step.png, id=113, 421.575pt x 316.18124pt>
 File: Ex3_Figs/Step.png Graphic file (type png)
  <use Ex3_Figs/Step.png>
-Package pdftex.def Info: Ex3_Figs/Step.png used on input line 784.
+Package pdftex.def Info: Ex3_Figs/Step.png used on input line 723.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- <Ex3_Figs/5Sine2.png, id=118, 421.575pt x 316.18124pt>
+ <Ex3_Figs/5Sine2.png, id=114, 421.575pt x 316.18124pt>
 File: Ex3_Figs/5Sine2.png Graphic file (type png)
  <use Ex3_Figs/5Sine2.png>
-Package pdftex.def Info: Ex3_Figs/5Sine2.png used on input line 798.
+Package pdftex.def Info: Ex3_Figs/5Sine2.png used on input line 736.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- [18 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/Step.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Sine2.png (PNG copy)>]
-<Ex3_Figs/100Sine.png, id=122, 421.575pt x 316.18124pt>
+ [20 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/Step.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Sine2.png (PNG copy)>]
+<Ex3_Figs/100Sine.png, id=118, 421.575pt x 316.18124pt>
 File: Ex3_Figs/100Sine.png Graphic file (type png)
  <use Ex3_Figs/100Sine.png>
-Package pdftex.def Info: Ex3_Figs/100Sine.png used on input line 809.
+Package pdftex.def Info: Ex3_Figs/100Sine.png used on input line 747.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- <Ex3_Figs/500Sine.png, id=123, 421.575pt x 316.18124pt>
+ <Ex3_Figs/500Sine.png, id=119, 421.575pt x 316.18124pt>
 File: Ex3_Figs/500Sine.png Graphic file (type png)
  <use Ex3_Figs/500Sine.png>
-Package pdftex.def Info: Ex3_Figs/500Sine.png used on input line 819.
+Package pdftex.def Info: Ex3_Figs/500Sine.png used on input line 757.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- <Ex3_Figs/5Squ1.png, id=124, 421.575pt x 316.18124pt>
+ <Ex3_Figs/5Squ1.png, id=120, 421.575pt x 316.18124pt>
 File: Ex3_Figs/5Squ1.png Graphic file (type png)
  <use Ex3_Figs/5Squ1.png>
-Package pdftex.def Info: Ex3_Figs/5Squ1.png used on input line 831.
+Package pdftex.def Info: Ex3_Figs/5Squ1.png used on input line 769.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- <Ex3_Figs/100Squ1.png, id=125, 421.575pt x 316.18124pt>
+ <Ex3_Figs/100Squ1.png, id=121, 421.575pt x 316.18124pt>
 File: Ex3_Figs/100Squ1.png Graphic file (type png)
  <use Ex3_Figs/100Squ1.png>
-Package pdftex.def Info: Ex3_Figs/100Squ1.png used on input line 841.
+Package pdftex.def Info: Ex3_Figs/100Squ1.png used on input line 779.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- [19 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Sine.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Sine.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Squ1.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Squ1.png (PNG copy)>] <Ex3_Figs/500Squ1.png, id=130, 421.575pt x 316.18124pt>
+ [21 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Sine.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Sine.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/5Squ1.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/100Squ1.png (PNG copy)>] <Ex3_Figs/500Squ1.png, id=125, 421.575pt x 316.18124pt>
 File: Ex3_Figs/500Squ1.png Graphic file (type png)
  <use Ex3_Figs/500Squ1.png>
-Package pdftex.def Info: Ex3_Figs/500Squ1.png used on input line 851.
+Package pdftex.def Info: Ex3_Figs/500Squ1.png used on input line 789.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- <Ex3_Figs/DecExp.png, id=131, 429.10312pt x 338.76563pt>
+ <Ex3_Figs/DecExp.png, id=126, 429.10312pt x 338.76563pt>
 File: Ex3_Figs/DecExp.png Graphic file (type png)
  <use Ex3_Figs/DecExp.png>
-Package pdftex.def Info: Ex3_Figs/DecExp.png used on input line 863.
+Package pdftex.def Info: Ex3_Figs/DecExp.png used on input line 801.
 (pdftex.def)             Requested size: 203.83417pt x 160.9205pt.
- [20 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Squ1.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/DecExp.png (PNG copy)>] [21] <Ex4_Figs/FiniteTent.png, id=140, 429.10312pt x 338.76563pt>
+ [22 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/500Squ1.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex3_Figs/DecExp.png (PNG copy)>] [23] <Ex4_Figs/FiniteTent.png, id=135, 429.10312pt x 338.76563pt>
 File: Ex4_Figs/FiniteTent.png Graphic file (type png)
  <use Ex4_Figs/FiniteTent.png>
-Package pdftex.def Info: Ex4_Figs/FiniteTent.png used on input line 938.
+Package pdftex.def Info: Ex4_Figs/FiniteTent.png used on input line 876.
 (pdftex.def)             Requested size: 203.83417pt x 160.9205pt.
- <Ex4_Figs/FiniteSine.png, id=141, 414.04688pt x 293.59688pt>
+ <Ex4_Figs/FiniteSine.png, id=136, 414.04688pt x 293.59688pt>
 File: Ex4_Figs/FiniteSine.png Graphic file (type png)
  <use Ex4_Figs/FiniteSine.png>
-Package pdftex.def Info: Ex4_Figs/FiniteSine.png used on input line 941.
+Package pdftex.def Info: Ex4_Figs/FiniteSine.png used on input line 880.
 (pdftex.def)             Requested size: 203.83417pt x 144.54019pt.
- <Ex4_Figs/FiniteSineabs.png, id=142, 421.575pt x 316.18124pt>
+ <Ex4_Figs/FiniteSineabs.png, id=137, 421.575pt x 316.18124pt>
 File: Ex4_Figs/FiniteSineabs.png Graphic file (type png)
  <use Ex4_Figs/FiniteSineabs.png>
-Package pdftex.def Info: Ex4_Figs/FiniteSineabs.png used on input line 944.
+Package pdftex.def Info: Ex4_Figs/FiniteSineabs.png used on input line 884.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- [22 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteTent.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSine.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSineabs.png (PNG copy)>] <Ex4_Figs/sinpi.png, id=146, 421.575pt x 316.18124pt>
+ [24 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteTent.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSine.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/FiniteSineabs.png (PNG copy)>] <Ex4_Figs/sinpi.png, id=141, 421.575pt x 316.18124pt>
 File: Ex4_Figs/sinpi.png Graphic file (type png)
  <use Ex4_Figs/sinpi.png>
-Package pdftex.def Info: Ex4_Figs/sinpi.png used on input line 959.
+Package pdftex.def Info: Ex4_Figs/sinpi.png used on input line 899.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- <Ex4_Figs/poly.png, id=147, 421.575pt x 316.18124pt>
+ <Ex4_Figs/poly.png, id=142, 421.575pt x 316.18124pt>
 File: Ex4_Figs/poly.png Graphic file (type png)
  <use Ex4_Figs/poly.png>
-Package pdftex.def Info: Ex4_Figs/poly.png used on input line 963.
+Package pdftex.def Info: Ex4_Figs/poly.png used on input line 903.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- <Ex4_Figs/1-xbcdiff.png, id=148, 421.575pt x 316.18124pt>
+ <Ex4_Figs/1-xbcdiff.png, id=143, 421.575pt x 316.18124pt>
 File: Ex4_Figs/1-xbcdiff.png Graphic file (type png)
  <use Ex4_Figs/1-xbcdiff.png>
-Package pdftex.def Info: Ex4_Figs/1-xbcdiff.png used on input line 979.
+Package pdftex.def Info: Ex4_Figs/1-xbcdiff.png used on input line 919.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- <Ex4_Figs/Tentbc.png, id=149, 414.04688pt x 293.59688pt>
+ <Ex4_Figs/Tentbc.png, id=144, 414.04688pt x 293.59688pt>
 File: Ex4_Figs/Tentbc.png Graphic file (type png)
  <use Ex4_Figs/Tentbc.png>
-Package pdftex.def Info: Ex4_Figs/Tentbc.png used on input line 983.
+Package pdftex.def Info: Ex4_Figs/Tentbc.png used on input line 923.
 (pdftex.def)             Requested size: 203.83417pt x 144.54019pt.
- [23 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/sinpi.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/poly.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/1-xbcdiff.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/Tentbc.png (PNG copy)>] <Ex4_Figs/timevar.png, id=153, 421.575pt x 316.18124pt>
+ [25 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/sinpi.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/poly.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/1-xbcdiff.png (PNG copy)> </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/Tentbc.png (PNG copy)>] <Ex4_Figs/timevar.png, id=149, 421.575pt x 316.18124pt>
 File: Ex4_Figs/timevar.png Graphic file (type png)
  <use Ex4_Figs/timevar.png>
-Package pdftex.def Info: Ex4_Figs/timevar.png used on input line 1001.
+Package pdftex.def Info: Ex4_Figs/timevar.png used on input line 941.
 (pdftex.def)             Requested size: 203.83417pt x 152.87973pt.
- [24 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/timevar.png (PNG copy)>] (/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux) ) 
+ [26 </home/george/Documents/Year 2/Maths-MATLAB/Report/Ex4_Figs/timevar.png (PNG copy)>] (/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5745 strings out of 494910
- 85475 string characters out of 6179836
- 151294 words of memory out of 5000000
- 8863 multiletter control sequences out of 15000+600000
- 17537 words of font info for 45 fonts, out of 8000000 for 9000
+ 5656 strings out of 494910
+ 83622 string characters out of 6179836
+ 150928 words of memory out of 5000000
+ 8782 multiletter control sequences out of 15000+600000
+ 17083 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,7n,77p,848b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.pdf" (24 pages, 1469616 bytes).
+ 38i,7n,77p,917b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk> </home/george/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "/home/george/Documents/Year 2/Maths-MATLAB/Report/Report.pdf" (26 pages, 2195995 bytes).
 PDF statistics:
- 557 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
+ 537 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
